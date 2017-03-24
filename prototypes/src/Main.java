@@ -13,10 +13,19 @@ public class Main
 
 		try
 		{
+//
+//			URL url = new URL(
+//					"https://places.cit.api.here.com/places/v1/autosuggest?at=48.7137376,9.3942463&q=grocery&app_id=iY1aAtZDpreaMQ6wrjzm&app_code=kwWoYMR9pQ3qINj3Y8jbLQ&tf=plain&pretty=true");
+
+//			URL url = new URL(
+//					"https://places.cit.api.here.com/places/v1/categories/places?app_id=iY1aAtZDpreaMQ6wrjzm&app_code=kwWoYMR9pQ3qINj3Y8jbLQ&at=48.7137376,9.3942463&pretty=true");
 
 			URL url = new URL(
-					"https://places.cit.api.here.com/places/v1/autosuggest?at=48.7137376,9.3942463&q=rewe&app_id=iY1aAtZDpreaMQ6wrjzm&app_code=kwWoYMR9pQ3qINj3Y8jbLQ&tf=plain&pretty=true");
-
+					"https://places.cit.api.here.com/places/v1/discover/explore?at=48.7137376,9.3942463&cat=shopping&app_id=iY1aAtZDpreaMQ6wrjzm&app_code=kwWoYMR9pQ3qINj3Y8jbLQ&pretty=true");
+			
+			
+//			/places/v1/discover/explore?at=52.5159%2C13.3777&cat=shopping&app_id=DemoAppId01082013GAL&app_code=AJKnXv84fjrb0KIHawS0Tg
+			
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setRequestMethod("GET");
 			conn.setRequestProperty("Accept", "application/json");
