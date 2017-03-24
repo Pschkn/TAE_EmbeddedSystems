@@ -223,7 +223,7 @@ Repository</panel_attributes>
       <w>250</w>
       <h>120</h>
     </coordinates>
-    <panel_attributes>Google APIs</panel_attributes>
+    <panel_attributes>Here </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -235,7 +235,7 @@ Repository</panel_attributes>
       <h>60</h>
     </coordinates>
     <panel_attributes>symbol=artifact
-Google Places API</panel_attributes>
+Here API</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
