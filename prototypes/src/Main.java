@@ -5,21 +5,13 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import com.google.gson.Gson;
 
 public class Main {
 
 	public static void main(String[] args) {
 
 		try {
-
-			// URL url = new URL(
-			// "https://places.cit.api.here.com/places/v1/autosuggest?at=48.71494,9.39371&q=rewe&app_id=iY1aAtZDpreaMQ6wrjzm&app_code=kwWoYMR9pQ3qINj3Y8jbLQ&tf=plain&pretty=true");
-
-			// URL url = new URL(
-			// "https://places.cit.api.here.com/places/v1/categories/places?app_id=iY1aAtZDpreaMQ6wrjzm&app_code=kwWoYMR9pQ3qINj3Y8jbLQ&at=48.71494,9.39371&pretty=true");
 
 			URL url = new URL(
 					"https://places.cit.api.here.com/places/v1/discover/explore?in=48.71494,9.39371;r=50&cat=food-drink&app_id=iY1aAtZDpreaMQ6wrjzm&app_code=kwWoYMR9pQ3qINj3Y8jbLQ&pretty=true");
@@ -42,21 +34,14 @@ public class Main {
 				json += output;
 
 				System.out.println(output);
-				
+
 			}
-//			System.out.println(json);
 
-			JsonParser parser = new JsonParser();
-			JsonObject obj = parser.parse(json).getAsJsonObject();
-			JsonObject results = obj.get("results").getAsJsonObject();
+			Gson gson = new Gson();
 
-			JsonArray items = results.get("items").getAsJsonArray();
+			MarketDataObject mdo = gson.fromJson(json, MarketDataObject.class);
 
-			JsonObject shop = items.get(0).getAsJsonObject();
-
-			String shopName = shop.get("title").getAsString();
-
-			System.out.println(shopName);
+			System.out.println(mdo.getResults().getItems().get(0).getTitle());
 
 			conn.disconnect();
 
