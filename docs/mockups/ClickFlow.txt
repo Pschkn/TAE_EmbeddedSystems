@@ -1,0 +1,19 @@
+Click Add new Product (2x)
+Click Category Dropdown
+Click on Dropdown Menu
+Click Add Product (2x)
+Click "Go Shopping"
+Click Dialog
+Click "Confirm" (2x)
+Click Scrollbar
+Click Scrollbar again
+Click "Your next Item: Apples"
+Click Scrollbar
+Click "Apples"
+Click Scrollbar
+Click on ListItem "Apples"
+Click Scrollbar
+Click "Apples"
+Click Scrollbar
+Click "Plums"
+Click on "Stop Shopping"
