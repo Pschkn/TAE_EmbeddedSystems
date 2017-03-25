@@ -1,0 +1,7 @@
+#Fri Mar 24 17:47:01 CET 2017
+base.0=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_b84f98711688efbf000895b70e441c09253ed318
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_6f71c6ec48ee55f8f5e31a42aaef1f5f8b9a5bc8\\classes.dex
+base.1=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_6f71c6ec48ee55f8f5e31a42aaef1f5f8b9a5bc8
+file.0=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_b84f98711688efbf000895b70e441c09253ed318\\classes.dex
