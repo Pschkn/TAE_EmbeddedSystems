@@ -1,0 +1,22 @@
+#Fri Mar 24 17:38:26 CET 2017
+renamed.6=classes2.dex
+renamed.5=classes5.dex
+renamed.4=classes4.dex
+renamed.3=classes6.dex
+renamed.2=classes7.dex
+renamed.1=classes.dex
+renamed.0=classes3.dex
+base.6=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_dfa7b3fcf3fdb1707748f2f9150e1699bd1e656f
+base.5=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-21.0.3_9c49c96249db36c8c342c621898732dd716c8396
+base.4=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\internal_impl-21.0.3_f7f37102531feb63ad6c7c7a9a00693c6aad4dfb
+base.3=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\achartengine-1.1.0_d41f9a77eb21cf423297deff24a734cc9094b511
+base.2=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\HxMBT_9bd6e84cd439d3151297b99917ac3f06162033c6
+base.1=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_2b952ca009d5f2ab45cc80291a9942ac80dcf113
+base.0=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_e8a985ffe14e3be9e4d6fc61195848c26d994cd7
+file.6=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_dfa7b3fcf3fdb1707748f2f9150e1699bd1e656f\\classes.dex
+file.5=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-21.0.3_9c49c96249db36c8c342c621898732dd716c8396\\classes.dex
+file.4=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\internal_impl-21.0.3_f7f37102531feb63ad6c7c7a9a00693c6aad4dfb\\classes.dex
+file.3=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\achartengine-1.1.0_d41f9a77eb21cf423297deff24a734cc9094b511\\classes.dex
+file.2=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\HxMBT_9bd6e84cd439d3151297b99917ac3f06162033c6\\classes.dex
+file.1=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_2b952ca009d5f2ab45cc80291a9942ac80dcf113\\classes.dex
+file.0=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_e8a985ffe14e3be9e4d6fc61195848c26d994cd7\\classes.dex
