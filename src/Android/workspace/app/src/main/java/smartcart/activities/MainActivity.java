@@ -4,6 +4,7 @@ package smartcart.activities;
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.app.ListActivity;
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -115,7 +117,10 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
             gsFragment.SetAdapters(adapter, boughtAdapter);
 
             mlFragment.SetFragmentReference(gsFragment);
+            mlFragment.SetInputMethodManager((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE));
             adaptersSet = true;
+
+
         }
     }
     @Override

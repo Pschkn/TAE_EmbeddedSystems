@@ -44,6 +44,7 @@ public class manageListDefaultFragment extends Fragment {
     View rootView;
     ArrayAdapter<String> adapter;
     goShoppingDefaultFragment fragmentReference;
+    InputMethodManager imm;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -92,6 +93,8 @@ public class manageListDefaultFragment extends Fragment {
                 String name = productName.getText().toString();
                 String quantity = productQuantity.getText().toString();
 
+                imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
+
                 shoppingList.AddListItem(name + " (" + quantity + ")");
                 adapter.notifyDataSetChanged();
             }
@@ -103,7 +106,7 @@ public class manageListDefaultFragment extends Fragment {
             public void onClick(View v) {
                 RelativeLayout tl = (RelativeLayout) getActivity().findViewById(R.id.addProductFragmentOrange);
                 tl.setVisibility(View.INVISIBLE);
-
+                imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
             }
         });
 
@@ -136,7 +139,9 @@ public class manageListDefaultFragment extends Fragment {
                 }
                 ignore = true;
                 etProductName.setText(s.toString());
+                ignore = true;
                 etProductName.setSelection(etProductName.getText().length());
+
             }
         });
 
@@ -164,4 +169,6 @@ public class manageListDefaultFragment extends Fragment {
     public void SetAdapter(ArrayAdapter<String> adapter){
         this.adapter = adapter;
     }
+
+    public void SetInputMethodManager(InputMethodManager imm){ this.imm = imm; };
 }
