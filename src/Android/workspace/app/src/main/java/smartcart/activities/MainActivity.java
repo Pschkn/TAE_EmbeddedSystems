@@ -4,6 +4,8 @@ package smartcart.activities;
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.app.ListActivity;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -12,10 +14,12 @@ import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import java.util.ArrayList;
@@ -41,8 +45,11 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         shoppingList.InitShoppingList();
         setContentView(R.layout.starting_page);
+
 
         // Initilization
         viewPager = (ViewPager) findViewById(R.id.pager);
@@ -89,7 +96,19 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
         if(!adaptersSet){
             adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1, shoppingList.GetShoppingList());
-            boughtAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1, shoppingList.GetBoughtList());
+            boughtAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1, shoppingList.GetBoughtList()){
+                @Override
+                public View getView(int position, View convertView, ViewGroup parent) {
+                    View view =super.getView(position, convertView, parent);
+
+                    TextView textView=(TextView) view.findViewById(android.R.id.text1);
+
+            /*YOUR CHOICE OF COLOR*/
+                    textView.setTextColor(Color.rgb(180, 180, 180));
+                    textView.setPaintFlags(textView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                    return view;
+                }
+            };
             manageListDefaultFragment mlFragment = (manageListDefaultFragment)mAdapter.getItem(0);
             goShoppingDefaultFragment gsFragment = (goShoppingDefaultFragment)mAdapter.getItem(1);
             mlFragment.SetAdapter(adapter);

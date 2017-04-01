@@ -21,13 +21,7 @@ public class shoppingList {
         myList.add("Baum4");
         myList.add("Baum5");
         myList.add("Baum6");
-        myList.add("Baum7");
-        myList.add("Baum8");
-        myList.add("Baum9");
-        myList.add("Baum10");
-        myList.add("Baum11");
-        myList.add("Baum12");
-        myList.add("Baum13");
+
     }
     public static ArrayList<String> GetShoppingList(){
         return myList;

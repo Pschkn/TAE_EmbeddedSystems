@@ -2,6 +2,7 @@ package smartcart.activities;
 
 import android.app.ActionBar;
 import android.app.ListActivity;
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,6 +14,8 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -100,6 +103,7 @@ public class manageListDefaultFragment extends Fragment {
             public void onClick(View v) {
                 RelativeLayout tl = (RelativeLayout) getActivity().findViewById(R.id.addProductFragmentOrange);
                 tl.setVisibility(View.INVISIBLE);
+
             }
         });
 

@@ -1,4 +1,4 @@
-#Sat Apr 01 11:41:24 CEST 2017
+#Sat Apr 01 14:58:50 CEST 2017
 base.0=D\:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_64c6b4bafd75f332547731bc88e7aafdb67dbe0d
 renamed.1=classes2.dex
 renamed.0=classes.dex

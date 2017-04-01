@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -76,6 +77,17 @@ public class goShoppingDefaultFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
                 shoppingList.UnBuyItem(position);
+                toBuyAdapter.notifyDataSetChanged();
+                boughtAdapter.notifyDataSetChanged();
+
+                currentItemTV.setText(shoppingList.GetCurrentItem());
+            }
+        });
+
+        getActivity().findViewById(R.id.currentItemLayout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                shoppingList.BuyItem(0);
                 toBuyAdapter.notifyDataSetChanged();
                 boughtAdapter.notifyDataSetChanged();
 

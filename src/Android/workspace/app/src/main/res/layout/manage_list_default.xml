@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/fab_material_white"
     android:layout_weight="1">
 
     <ListView
@@ -26,7 +25,7 @@
         android:layout_marginRight="20dp"
         android:elevation="20dp"
         android:paddingBottom="50dp"
-        app:button_color="@color/fab_material_red_500"
+        app:button_color="@color/accent_material_dark"
         app:image="@drawable/fab_plus_icon"
         app:type="normal" />
 
@@ -37,7 +36,6 @@
         android:minHeight="10dp"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
-        android:background="@color/fab_material_orange_500"
         android:elevation="20dp"
         android:layout_alignBaseline="@id/listView"
         android:layout_marginBottom="330dp"
@@ -52,6 +50,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
+            android:background="@color/fab_material_blue_grey_900"
             >
 
             <TableRow

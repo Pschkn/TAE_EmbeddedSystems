@@ -79,7 +79,7 @@ MERGED from [com.android.support:support-v4:21.0.3] C:\Users\admin\.android\buil
 	android:icon
 		ADDED from D:\Master\Embedded GIT\src\Android\workspace\app\src\main\AndroidManifest.xml:25:9-45
 	android:theme
-		ADDED from D:\Master\Embedded GIT\src\Android\workspace\app\src\main\AndroidManifest.xml:28:9-40
+		ADDED from D:\Master\Embedded GIT\src\Android\workspace\app\src\main\AndroidManifest.xml:28:9-50
 	android:logo
 		ADDED from D:\Master\Embedded GIT\src\Android\workspace\app\src\main\AndroidManifest.xml:27:9-45
 	android:name
