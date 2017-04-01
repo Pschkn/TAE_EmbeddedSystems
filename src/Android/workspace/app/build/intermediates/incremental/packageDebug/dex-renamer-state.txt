@@ -1,7 +1,4 @@
-#Sat Apr 01 14:58:50 CEST 2017
-base.0=D\:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_64c6b4bafd75f332547731bc88e7aafdb67dbe0d
-renamed.1=classes2.dex
+#Sat Apr 01 15:39:49 CEST 2017
+base.0=D\:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
-file.1=D\:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_ee44449ca5f4bfdcdcc0623a4674835404313a1c\\classes.dex
-base.1=D\:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_ee44449ca5f4bfdcdcc0623a4674835404313a1c
-file.0=D\:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_64c6b4bafd75f332547731bc88e7aafdb67dbe0d\\classes.dex
+file.0=D\:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
