@@ -2,6 +2,24 @@
 <items version="2" >
 
     <item
+        is-multidex="true"
+        jar="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5f6afedbfd82131bcf72effbbd9084a720cbb861">
+        <dex dex="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_64c6b4bafd75f332547731bc88e7aafdb67dbe0d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Master\Embedded GIT\src\Android\workspace\app\libs\achartengine-1.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9932e3fb9fbe54e80873e77f72a99f79e33b3250">
+        <dex dex="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\2\achartengine-1.1.0_7d8e3e4d49e74f1d5b9b557f5152bddb5ca9994f\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="D:\Master\Embedded GIT\src\Android\workspace\app\libs\achartengine-1.1.0.jar"
         jumboMode="false"
@@ -47,6 +65,15 @@
         <dex dex="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\pre-dexed\debug\classes_dfa7b3fcf3fdb1707748f2f9150e1699bd1e656f.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_ee44449ca5f4bfdcdcc0623a4674835404313a1c\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="C:\Users\admin\.android\build-cache\1248197c6a02bba4f9115ed9c0b18afb1ad25490\output\jars\libs\internal_impl-21.0.3.jar"
         jumboMode="false"
@@ -81,6 +108,15 @@
         revision="25.0.2"
         sha1="a0f231edd201f26ebb42244dd8a18ffcb07e462b">
         <dex dex="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\pre-dexed\debug\HxMBT_f554648aeceb79663b50939c4079ee5006823c8f.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Master\Embedded GIT\src\Android\workspace\app\libs\HxMBT.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a0f231edd201f26ebb42244dd8a18ffcb07e462b">
+        <dex dex="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\2\HxMBT_f554648aeceb79663b50939c4079ee5006823c8f\classes.dex" />
     </item>
     <item
         is-multidex="false"

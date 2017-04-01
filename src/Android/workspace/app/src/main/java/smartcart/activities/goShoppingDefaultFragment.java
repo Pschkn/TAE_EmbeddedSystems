@@ -1,5 +1,10 @@
 package smartcart.activities;
 
+import android.content.Context;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -20,11 +25,13 @@ import smartcart.model.shoppingList;
  * Created by admin on 25.03.2017.
  */
 
-public class goShoppingDefaultFragment extends Fragment {
+public class goShoppingDefaultFragment extends Fragment implements SensorEventListener {
     ListView buyListView, boughtListView;
     TextView currentItemTV;
     View rootView;
     ArrayAdapter<String> toBuyAdapter, boughtAdapter;
+    SensorManager mSensorManager;
+    Sensor mSensor;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -50,6 +57,10 @@ public class goShoppingDefaultFragment extends Fragment {
             boughtListView.setAdapter(boughtAdapter);
             boughtAdapter.notifyDataSetChanged();
         }
+
+        // Sensors
+        mSensorManager  = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
+        mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
         return rootView;
     }
@@ -94,6 +105,11 @@ public class goShoppingDefaultFragment extends Fragment {
                 currentItemTV.setText(shoppingList.GetCurrentItem());
             }
         });
+
+        if(mSensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER).size()!=0){
+            Sensor s = mSensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER).get(0);
+            mSensorManager.registerListener(this,s, SensorManager.SENSOR_DELAY_NORMAL);
+        }
     }
 
     @Override
@@ -108,5 +124,23 @@ public class goShoppingDefaultFragment extends Fragment {
 
     public void UpdateCurrentItem(){
         currentItemTV.setText(shoppingList.GetCurrentItem());
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        if (event.sensor.getType() != Sensor.TYPE_ACCELEROMETER)
+            return;
+        if (event.values[1] > 6f) {
+            System.out.print("LOL");
+        }
+        if (event.values[0] > 6f) {
+            System.out.print("LOL");
+        }
+        return;
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        return;
     }
 }
