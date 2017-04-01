@@ -4,9 +4,67 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/white2"
-    android:paddingLeft="8dp"
-    android:paddingBottom="50dp"
-    android:paddingRight="8dp">
+    android:paddingLeft="0dp"
+    android:paddingBottom="0dp"
+    android:paddingRight="0dp">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_weight="1"
+        android:elevation="15dp"
+        android:background="@color/fab_material_black">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Next Item:"
+            android:textColor="@color/fab_material_white"/>
+
+        <TextView
+            android:id="@+id/currentItemTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/default_gap"
+            android:textColor="@color/fab_material_blue_900"
+            android:textSize="40dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:background="#D8FFD0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ToBuy:"
+            android:textColor="@color/fab_material_blue_grey_900"/>
+
+        <ListView
+            android:id="@+id/toBuyListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:background="#FFD0D0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bought:"
+            android:textColor="@color/fab_material_blue_grey_900"/>
+
+        <ListView
+            android:id="@+id/boughtListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+    </LinearLayout>
 
 </LinearLayout>

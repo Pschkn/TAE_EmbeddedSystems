@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Master\Embedded GIT\src\Android\workspace\app\src\main\AndroidManifest.xml:1:1-49:12
+ADDED from D:\Master\Embedded GIT\src\Android\workspace\app\src\main\AndroidManifest.xml:1:1-48:12
 	package
 		ADDED from D:\Master\Embedded GIT\src\Android\workspace\app\src\main\AndroidManifest.xml:2:5-35
 		INJECTED from D:\Master\Embedded GIT\src\Android\workspace\app\src\main\AndroidManifest.xml
@@ -70,7 +70,7 @@ ADDED from D:\Master\Embedded GIT\src\Android\workspace\app\src\main\AndroidMani
 	android:required
 		ADDED from D:\Master\Embedded GIT\src\Android\workspace\app\src\main\AndroidManifest.xml:22:9-32
 application
-ADDED from D:\Master\Embedded GIT\src\Android\workspace\app\src\main\AndroidManifest.xml:24:5-48:19
+ADDED from D:\Master\Embedded GIT\src\Android\workspace\app\src\main\AndroidManifest.xml:24:5-47:19
 MERGED from [com.android.support:gridlayout-v7:21.0.3] C:\Users\admin\.android\build-cache\81d054a94dcb002eb5906fd947783d2765a8198e\output\AndroidManifest.xml:16:5-19
 MERGED from [com.google.android.gms:play-services:6.5.87] C:\Users\admin\.android\build-cache\2413ac09181db1166aae50772a8aeae9d645bf49\output\AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:21.0.3] C:\Users\admin\.android\build-cache\1248197c6a02bba4f9115ed9c0b18afb1ad25490\output\AndroidManifest.xml:16:5-19
@@ -115,7 +115,3 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\Master\Embedded GIT\src\Android\workspace\app\src\main\AndroidManifest.xml:43:17-77
 	android:name
 		ADDED from D:\Master\Embedded GIT\src\Android\workspace\app\src\main\AndroidManifest.xml:43:27-74
-activity#smartcart.activities.manageListDefaultFragment$ListHandler
-ADDED from D:\Master\Embedded GIT\src\Android\workspace\app\src\main\AndroidManifest.xml:46:9-75
-	android:name
-		ADDED from D:\Master\Embedded GIT\src\Android\workspace\app\src\main\AndroidManifest.xml:46:19-72

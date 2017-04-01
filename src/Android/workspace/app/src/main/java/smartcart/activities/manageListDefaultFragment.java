@@ -7,15 +7,21 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.scalified.fab.ActionButton;
 
@@ -23,6 +29,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import smartcart.model.shoppingList;
+
+import static android.R.attr.data;
 
 /**
  * Created by admin on 25.03.2017.
@@ -32,7 +40,7 @@ public class manageListDefaultFragment extends Fragment {
     ListView mainListView;
     View rootView;
     ArrayAdapter<String> adapter;
-    addProductFragment addProductFragment;
+    goShoppingDefaultFragment fragmentReference;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -40,7 +48,6 @@ public class manageListDefaultFragment extends Fragment {
         super.onCreateView(inflater, container, savedInstanceState);
 
         rootView = inflater.inflate(R.layout.manage_list_default, container, false);
-        addProductFragment = new addProductFragment();
 
         // Get the arguments that was supplied when
         // the fragment was instantiated in the
@@ -59,6 +66,7 @@ public class manageListDefaultFragment extends Fragment {
     public void onStart(){
         super.onStart();
 
+        // Buttons
         ActionButton addButton = (ActionButton)getActivity().findViewById(R.id.addButton);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,48 +102,62 @@ public class manageListDefaultFragment extends Fragment {
                 tl.setVisibility(View.INVISIBLE);
             }
         });
+
+        // EditTexts
+        final EditText etProductName = (EditText)getActivity().findViewById(R.id.et_name);
+
+            etProductName.addTextChangedListener(new TextWatcher(){
+            boolean ignore = false;
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(ignore){
+                    ignore = false;
+                    return;
+                }
+
+                for(int i = s.length(); i > 0; i--) {
+
+                    if(s.subSequence(i-1, i).toString().equals("\n"))
+                        s.replace(i-1, i, "");
+                }
+                ignore = true;
+                etProductName.setText(s.toString());
+                etProductName.setSelection(etProductName.getText().length());
+            }
+        });
+
+        //ListView
+        ListView listView = (ListView)getActivity().findViewById(R.id.listView);
+
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+            public boolean onItemLongClick(AdapterView<?> arg0, View v,
+                                           int index, long arg3) {
+
+                shoppingList.DeleteListItemAt(index);
+                adapter.notifyDataSetChanged();
+                Toast.makeText(getActivity(), "Item has been deleted!",
+                        Toast.LENGTH_LONG).show();
+
+                fragmentReference.UpdateCurrentItem();
+                return false;
+            }});
     }
 
-
-
+    public void SetFragmentReference(goShoppingDefaultFragment fragment){
+        fragmentReference = fragment;
+    }
     public void SetAdapter(ArrayAdapter<String> adapter){
         this.adapter = adapter;
-    }
-/*
-    public void Initialize(){
-        super.onResume();
-        myList = new ArrayList<String>();
-        myList.add("apfel");
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, values);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1, (String[])myList.toArray());
-    }
-*/
-    public class ListHandler extends ListActivity {
-        ArrayAdapter<String> arrayAdapter;
-        ArrayList<String> myList;
-
-        @Override
-        protected void onCreate(Bundle state){
-            super.onCreate(state);
-            myList = new ArrayList<String>();
-            initList();
-            arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, myList);
-            ((ListView)(getActivity().findViewById(R.id.listView))).setAdapter(arrayAdapter);
-            arrayAdapter.notifyDataSetChanged();
-        }
-
-        @Override
-        protected void onResume(){
-            super.onResume();
-            arrayAdapter.notifyDataSetChanged();
-        }
-
-        private void initList(){
-            myList.add("Apple");
-            myList.add("Birne");
-            myList.add("Peach");
-            myList.add("Banano");
-        }
     }
 }

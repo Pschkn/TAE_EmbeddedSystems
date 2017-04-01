@@ -45,7 +45,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="smartcart.activities.manageListDefaultFragment$ListHandler" />
 
         <service
             android:name="com.android.tools.fd.runtime.InstantRunService"

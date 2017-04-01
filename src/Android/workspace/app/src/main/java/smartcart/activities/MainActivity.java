@@ -33,7 +33,8 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     private CustomPagerAdapter mAdapter;
     private ActionBar actionBar;
     ArrayList values;
-    ArrayAdapter<String> adapter;
+    ArrayAdapter<String> adapter, boughtAdapter;
+    boolean adaptersSet = false;
     // Tab titles
     private String[] tabs = { "Manage List", "Go Shopping"};
 
@@ -86,17 +87,26 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     protected void onResume(){
         super.onResume();
 
-        if(viewPager.getCurrentItem() == 0){
+        if(!adaptersSet){
             adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1, shoppingList.GetShoppingList());
-            manageListDefaultFragment current = (manageListDefaultFragment)mAdapter.getItem(0);
-            current.SetAdapter(adapter);
+            boughtAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1, shoppingList.GetBoughtList());
+            manageListDefaultFragment mlFragment = (manageListDefaultFragment)mAdapter.getItem(0);
+            goShoppingDefaultFragment gsFragment = (goShoppingDefaultFragment)mAdapter.getItem(1);
+            mlFragment.SetAdapter(adapter);
+            gsFragment.SetAdapters(adapter, boughtAdapter);
+
+            mlFragment.SetFragmentReference(gsFragment);
+            adaptersSet = true;
         }
     }
     @Override
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+        goShoppingDefaultFragment gsFragment = (goShoppingDefaultFragment)mAdapter.getItem(1);
+        //gsFragment.UpdateCurrentItem();
         // on tab selected
         // show respected fragment view
         viewPager.setCurrentItem(tab.getPosition());
+
     }
 
     @Override
