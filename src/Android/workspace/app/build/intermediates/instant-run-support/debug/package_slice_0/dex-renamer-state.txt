@@ -1,4 +1,4 @@
-#Fri Mar 24 17:38:26 CET 2017
-base.0=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_0
+#Fri Mar 31 16:21:59 CEST 2017
+base.0=D\:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_0
 renamed.0=classes.dex
-file.0=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_0\\classes.dex
+file.0=D\:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_0\\classes.dex

@@ -3,84 +3,75 @@
 
     <item
         is-multidex="true"
-        jar="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\libs\achartengine-1.1.0.jar"
+        jar="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="9932e3fb9fbe54e80873e77f72a99f79e33b3250">
-        <dex dex="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\2\achartengine-1.1.0_d41f9a77eb21cf423297deff24a734cc9094b511\classes.dex" />
+        sha1="21b92116e92474d439885bd9f54c8fda11cef1a6">
+        <dex dex="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_64c6b4bafd75f332547731bc88e7aafdb67dbe0d\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\admin\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-21.0.3_9c49c96249db36c8c342c621898732dd716c8396\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="1b4057fdf5769cc861e73aa34d032038fec51fe0">
-        <dex dex="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_6f71c6ec48ee55f8f5e31a42aaef1f5f8b9a5bc8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_b84f98711688efbf000895b70e441c09253ed318\classes.dex" />
+        <dex dex="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_ee44449ca5f4bfdcdcc0623a4674835404313a1c\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\admin\.android\build-cache\1248197c6a02bba4f9115ed9c0b18afb1ad25490\output\jars\classes.jar"
+        jar="D:\Master\Embedded GIT\src\Android\workspace\app\libs\achartengine-1.1.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2b952ca009d5f2ab45cc80291a9942ac80dcf113\classes.dex" />
+        sha1="9932e3fb9fbe54e80873e77f72a99f79e33b3250">
+        <dex dex="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\2\achartengine-1.1.0_7d8e3e4d49e74f1d5b9b557f5152bddb5ca9994f\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\admin\.android\build-cache\1248197c6a02bba4f9115ed9c0b18afb1ad25490\output\jars\libs\internal_impl-21.0.3.jar"
+        jar="C:\Users\admin\.android\build-cache\99d34e265818091a48301c030d70241efb87e6e0\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-21.0.3_f7f37102531feb63ad6c7c7a9a00693c6aad4dfb\classes.dex" />
+        sha1="5b13f813132d907a55dd2f9ac10356a84220aca6">
+        <dex dex="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_456ee34619b5fc50f3068cc2c7ffeaf6bca56d78\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\admin\.android\build-cache\81d054a94dcb002eb5906fd947783d2765a8198e\output\jars\classes.jar"
+        jar="C:\Users\admin\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.9\872ec63b41181e29ad5a3723f1417356e2d2c0f2\slf4j-api-1.7.9.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="2e8c06a7aad26ba8d2d5cab8134556594fe36856">
-        <dex dex="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_dfa7b3fcf3fdb1707748f2f9150e1699bd1e656f\classes.dex" />
+        sha1="872ec63b41181e29ad5a3723f1417356e2d2c0f2">
+        <dex dex="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\10\slf4j-api-1.7.9_7f04f22aa8c3b6a552b4bfe01ec8b640311b2f2f\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\admin\.android\build-cache\2413ac09181db1166aae50772a8aeae9d645bf49\output\jars\classes.jar"
+        jar="C:\Users\admin\.android\build-cache\d9882d4b479eee01c9e03cc045dee5dde75c3b18\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
-        <dex dex="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e8a985ffe14e3be9e4d6fc61195848c26d994cd7\classes.dex" />
+        sha1="ed8dcbd3b5917e2da68ec6fe0bf89278a98b7d86">
+        <dex dex="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6932a2bd38d1267c213c52587ebb3760c9a88130\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\libs\HxMBT.jar"
+        jar="D:\Master\Embedded GIT\src\Android\workspace\app\libs\HxMBT.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="a0f231edd201f26ebb42244dd8a18ffcb07e462b">
-        <dex dex="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\2\HxMBT_9bd6e84cd439d3151297b99917ac3f06162033c6\classes.dex" />
+        <dex dex="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\2\HxMBT_f554648aeceb79663b50939c4079ee5006823c8f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\admin\.android\build-cache\7728375909a41eb631019e68fc02cd8b930e58ec\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="25ec8a08945720922f7ed4d3eedd323fe09c9678">
+        <dex dex="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_60b64ecd113a332a8f6c03153cf624bd8cb214fa\classes.dex" />
     </item>
 
 </items>

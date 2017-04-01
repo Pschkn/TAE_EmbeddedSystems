@@ -1,10 +1,10 @@
 [
     {
-        "merged": "D:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher.png",
-        "source": "D:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
+        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher_old.png",
+        "source": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher_old.png"
     },
     {
-        "merged": "D:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher_old.png",
-        "source": "D:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher_old.png"
+        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher.png",
+        "source": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
     }
 ]

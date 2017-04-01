@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        applicationId "edu.example.embSys.mma"
+        applicationId "smartCart.activities"
         minSdkVersion 21
         targetSdkVersion 21
     }
@@ -22,6 +22,7 @@ dependencies {
     compile 'com.android.support:support-v4:21.0.3'
     compile 'com.android.support:gridlayout-v7:21.0.3'
     compile 'com.google.android.gms:play-services:6.5.87'
+    compile 'com.scalified:fab:1.1.2'
     compile files('libs/achartengine-1.1.0.jar')
     compile files('libs/HxMBT.jar')
 }
