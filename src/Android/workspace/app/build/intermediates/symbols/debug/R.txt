@@ -258,7 +258,8 @@ int layout go_shopping_default 0x7f030001
 int layout manage_list_default 0x7f030002
 int layout starting_page 0x7f030003
 int menu activity_main 0x7f0b0000
-int raw gtm_analytics 0x7f050000
+int raw beep5 0x7f050000
+int raw gtm_analytics 0x7f050001
 int string ActStateDescr 0x7f06001d
 int string ActStateValue 0x7f06001e
 int string ButtonActStateStartStopDescr 0x7f06001f

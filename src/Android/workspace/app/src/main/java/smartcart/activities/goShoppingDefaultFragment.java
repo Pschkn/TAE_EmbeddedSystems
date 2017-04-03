@@ -5,6 +5,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.media.MediaPlayer;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -20,18 +21,21 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import smartcart.model.shoppingList;
+import smartcart.sensorHandler.sensorListener;
 
 /**
  * Created by admin on 25.03.2017.
  */
 
-public class goShoppingDefaultFragment extends Fragment implements SensorEventListener {
+public class goShoppingDefaultFragment extends Fragment {
     ListView buyListView, boughtListView;
     TextView currentItemTV;
     View rootView;
     ArrayAdapter<String> toBuyAdapter, boughtAdapter;
     SensorManager mSensorManager;
     Sensor mSensor;
+    MediaPlayer mp;
+    sensorListener sel;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -57,8 +61,11 @@ public class goShoppingDefaultFragment extends Fragment implements SensorEventLi
             boughtListView.setAdapter(boughtAdapter);
             boughtAdapter.notifyDataSetChanged();
         }
+        // Media
+        mp = MediaPlayer.create(getActivity().getApplicationContext(), R.raw. beep5);
 
         // Sensors
+        sel = new sensorListener(mp);
         mSensorManager  = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
@@ -85,8 +92,7 @@ public class goShoppingDefaultFragment extends Fragment implements SensorEventLi
 
         boughtListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position,
-                                    long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 shoppingList.UnBuyItem(position);
                 toBuyAdapter.notifyDataSetChanged();
                 boughtAdapter.notifyDataSetChanged();
@@ -106,9 +112,18 @@ public class goShoppingDefaultFragment extends Fragment implements SensorEventLi
             }
         });
 
+        // registering sensors
         if(mSensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER).size()!=0){
             Sensor s = mSensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER).get(0);
-            mSensorManager.registerListener(this,s, SensorManager.SENSOR_DELAY_NORMAL);
+            mSensorManager.registerListener(sel,s, SensorManager.SENSOR_DELAY_NORMAL);
+        }
+        if(mSensorManager.getSensorList(Sensor.TYPE_GYROSCOPE).size()!=0){
+            Sensor s = mSensorManager.getSensorList(Sensor.TYPE_GYROSCOPE).get(0);
+            mSensorManager.registerListener(sel,s, SensorManager.SENSOR_DELAY_NORMAL);
+        }
+        if(mSensorManager.getSensorList(Sensor.TYPE_ROTATION_VECTOR).size()!=0){
+            Sensor s = mSensorManager.getSensorList(Sensor.TYPE_ROTATION_VECTOR).get(0);
+            mSensorManager.registerListener(sel,s, SensorManager.SENSOR_DELAY_NORMAL);
         }
     }
 
@@ -124,23 +139,5 @@ public class goShoppingDefaultFragment extends Fragment implements SensorEventLi
 
     public void UpdateCurrentItem(){
         currentItemTV.setText(shoppingList.GetCurrentItem());
-    }
-
-    @Override
-    public void onSensorChanged(SensorEvent event) {
-        if (event.sensor.getType() != Sensor.TYPE_ACCELEROMETER)
-            return;
-        if (event.values[1] > 6f) {
-            System.out.print("LOL");
-        }
-        if (event.values[0] > 6f) {
-            System.out.print("LOL");
-        }
-        return;
-    }
-
-    @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
-        return;
     }
 }

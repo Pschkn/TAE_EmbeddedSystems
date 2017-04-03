@@ -836,7 +836,8 @@ containing a value of this type.
         public static final int activity_main=0x7f0b0000;
     }
     public static final class raw {
-        public static final int gtm_analytics=0x7f050000;
+        public static final int beep5=0x7f050000;
+        public static final int gtm_analytics=0x7f050001;
     }
     public static final class string {
         public static final int ActStateDescr=0x7f06001d;
