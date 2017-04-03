@@ -2,5 +2,9 @@
     {
         "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\raw\\gtm_analytics",
         "source": "C:\\Users\\admin\\.android\\build-cache\\2413ac09181db1166aae50772a8aeae9d645bf49\\output\\res\\raw\\gtm_analytics"
+    },
+    {
+        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\raw\\beep5.mp3",
+        "source": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\src\\main\\res\\raw\\beep5.mp3"
     }
 ]
