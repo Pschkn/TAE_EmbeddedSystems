@@ -2,104 +2,99 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="21"
-    build-mode="FULL"
+    build-mode="COLD"
     density="xxhdpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1490374020595"
-    token="5568490594008534830"
-    verifier="FULL_BUILD_REQUESTED" >
+    timestamp="1491126157640"
+    token="-5911692027873954737"
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="174" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="13" />
     <task
         name="verifier"
-        duration="0" />
+        duration="4" />
 
     <artifact
-        location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\outputs\apk\app-debug.apk"
+        location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\Master\Embedded GIT\src\Android\workspace\app\build\outputs\apk\app-debug.apk"
         type="SPLIT_MAIN" />
-    <artifact
-        location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1490374020595"
+        timestamp="1491121736294"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\outputs\apk\app-debug.apk"
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\outputs\apk\app-debug.apk"
             type="SPLIT_MAIN" />
         <artifact
-            location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1491126035001"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\outputs\apk\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1491126157640"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
+        <artifact
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\outputs\apk\app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

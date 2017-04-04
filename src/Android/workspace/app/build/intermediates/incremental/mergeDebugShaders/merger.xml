@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\src\main\shaders"/></dataSet><dataSet config="debug"><source path="D:\Master\Embedded\IDE+MMA\AndroidStudio\workspace\app\src\debug\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\Master\Embedded GIT\src\Android\workspace\app\src\main\shaders"/></dataSet><dataSet config="debug"><source path="D:\Master\Embedded GIT\src\Android\workspace\app\src\debug\shaders"/></dataSet></merger>

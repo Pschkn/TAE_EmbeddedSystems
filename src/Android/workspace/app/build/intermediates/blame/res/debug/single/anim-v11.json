@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\anim-v11\\fab_jump_from_down.xml",
+        "source": "C:\\Users\\admin\\.android\\build-cache\\d9882d4b479eee01c9e03cc045dee5dde75c3b18\\output\\res\\anim-v11\\fab_jump_from_down.xml"
+    },
+    {
+        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\anim-v11\\fab_scale_up.xml",
+        "source": "C:\\Users\\admin\\.android\\build-cache\\d9882d4b479eee01c9e03cc045dee5dde75c3b18\\output\\res\\anim-v11\\fab_scale_up.xml"
+    },
+    {
+        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\anim-v11\\fab_roll_from_down.xml",
+        "source": "C:\\Users\\admin\\.android\\build-cache\\d9882d4b479eee01c9e03cc045dee5dde75c3b18\\output\\res\\anim-v11\\fab_roll_from_down.xml"
+    },
+    {
+        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\anim-v11\\fab_jump_to_down.xml",
+        "source": "C:\\Users\\admin\\.android\\build-cache\\d9882d4b479eee01c9e03cc045dee5dde75c3b18\\output\\res\\anim-v11\\fab_jump_to_down.xml"
+    },
+    {
+        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\anim-v11\\fab_roll_to_down.xml",
+        "source": "C:\\Users\\admin\\.android\\build-cache\\d9882d4b479eee01c9e03cc045dee5dde75c3b18\\output\\res\\anim-v11\\fab_roll_to_down.xml"
+    },
+    {
+        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\anim-v11\\fab_roll_to_right.xml",
+        "source": "C:\\Users\\admin\\.android\\build-cache\\d9882d4b479eee01c9e03cc045dee5dde75c3b18\\output\\res\\anim-v11\\fab_roll_to_right.xml"
+    },
+    {
+        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\anim-v11\\fab_jump_to_right.xml",
+        "source": "C:\\Users\\admin\\.android\\build-cache\\d9882d4b479eee01c9e03cc045dee5dde75c3b18\\output\\res\\anim-v11\\fab_jump_to_right.xml"
+    },
+    {
+        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\anim-v11\\fab_scale_down.xml",
+        "source": "C:\\Users\\admin\\.android\\build-cache\\d9882d4b479eee01c9e03cc045dee5dde75c3b18\\output\\res\\anim-v11\\fab_scale_down.xml"
+    },
+    {
+        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\anim-v11\\fab_jump_from_right.xml",
+        "source": "C:\\Users\\admin\\.android\\build-cache\\d9882d4b479eee01c9e03cc045dee5dde75c3b18\\output\\res\\anim-v11\\fab_jump_from_right.xml"
+    },
+    {
+        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\anim-v11\\fab_roll_from_right.xml",
+        "source": "C:\\Users\\admin\\.android\\build-cache\\d9882d4b479eee01c9e03cc045dee5dde75c3b18\\output\\res\\anim-v11\\fab_roll_from_right.xml"
+    }
+]

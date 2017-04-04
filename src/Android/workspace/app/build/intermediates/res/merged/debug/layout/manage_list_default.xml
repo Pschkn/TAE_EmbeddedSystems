@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_weight="1">
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1" />
+     />
+
+    <com.scalified.fab.ActionButton
+        android:id="@+id/addButton"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignBottom="@id/listView"
+        android:layout_alignEnd="@id/listView"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:elevation="20dp"
+        android:paddingBottom="50dp"
+        app:button_color="@color/accent_material_dark"
+        app:image="@drawable/fab_plus_icon"
+        app:type="normal" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="10dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:elevation="20dp"
+        android:layout_alignBaseline="@id/listView"
+        android:layout_marginBottom="330dp"
+        android:id="@+id/addProductFragmentOrange"
+        android:visibility="invisible"
+        >
+
+
+        <TableLayout
+            android:id="@+id/relativeLayoutOrange"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/fab_material_blue_grey_900"
+            >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    style="@style/AppTheme"
+                    android:layout_weight="1"
+                    android:text="Add Product" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    style="@style/AppTheme"
+                    android:layout_weight="1"
+                    android:text="Name:" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    style="@style/AppTheme"
+                    android:layout_weight="2"
+                    android:maxLines="1"
+                    android:hint="Product Name"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    style="@style/AppTheme"
+                    android:layout_weight="1"
+                    android:text="Quantity:" />
+
+                <EditText
+                    android:id="@+id/et_quantity"
+                    style="@style/AppTheme"
+                    android:layout_weight="2"
+                    android:maxLines="1"
+                    android:hint="1"
+                    android:inputType="number"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btnConfirm"
+                    android:layout_weight="4"
+                    android:text="Confirm" />
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_weight="1"
+                    android:text="Cancel" />
+            </TableRow>
+
+        </TableLayout>
+    </RelativeLayout>
+</RelativeLayout>

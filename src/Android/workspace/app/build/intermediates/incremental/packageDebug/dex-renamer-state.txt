@@ -1,7 +1,7 @@
-#Fri Mar 24 17:47:01 CET 2017
-base.0=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_b84f98711688efbf000895b70e441c09253ed318
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_6f71c6ec48ee55f8f5e31a42aaef1f5f8b9a5bc8\\classes.dex
-base.1=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_6f71c6ec48ee55f8f5e31a42aaef1f5f8b9a5bc8
-file.0=D\:\\Master\\Embedded\\IDE+MMA\\AndroidStudio\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_b84f98711688efbf000895b70e441c09253ed318\\classes.dex
+#Sat Apr 01 18:01:02 CEST 2017
+base.0=D\:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_64c6b4bafd75f332547731bc88e7aafdb67dbe0d
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=D\:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_ee44449ca5f4bfdcdcc0623a4674835404313a1c\\classes.dex
+base.1=D\:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_ee44449ca5f4bfdcdcc0623a4674835404313a1c
+file.0=D\:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_64c6b4bafd75f332547731bc88e7aafdb67dbe0d\\classes.dex
