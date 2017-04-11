@@ -125,6 +125,15 @@ public class goShoppingDefaultFragment extends Fragment {
             Sensor s = mSensorManager.getSensorList(Sensor.TYPE_ROTATION_VECTOR).get(0);
             mSensorManager.registerListener(sel,s, SensorManager.SENSOR_DELAY_NORMAL);
         }
+        if(mSensorManager.getSensorList(Sensor.TYPE_MAGNETIC_FIELD).size()!=0){
+            Sensor s = mSensorManager.getSensorList(Sensor.TYPE_MAGNETIC_FIELD).get(0);
+            mSensorManager.registerListener(sel,s, SensorManager.SENSOR_DELAY_NORMAL);
+        }
+        if(mSensorManager.getSensorList(Sensor.TYPE_GRAVITY).size()!=0){
+            Sensor s = mSensorManager.getSensorList(Sensor.TYPE_GRAVITY).get(0);
+            mSensorManager.registerListener(sel,s, SensorManager.SENSOR_DELAY_NORMAL);
+        }
+        return;
     }
 
     @Override
