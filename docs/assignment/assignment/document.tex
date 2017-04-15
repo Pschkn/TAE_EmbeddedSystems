@@ -1,0 +1,71 @@
+\documentclass[12pt, a4paper, oneside, british]{report}
+\usepackage{epigraph}
+\usepackage{setspace}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[british]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{pgfplotstable}
+\usepackage{pgfplots}
+\usepackage{natbib}
+\usepackage[hyphens]{url}
+\bibliographystyle{abbrvnat}
+
+%Diagramme
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+
+\usepackage[singlelinecheck=false,font={footnotesize, it}, tablewithin=section,
+figurewithin=section,format=hang]{caption}
+
+\usepackage{multirow}
+\usepackage{footnote}
+\makesavenoteenv{tabular}
+%To Use Float Barrier
+\usepackage{placeins}
+
+%For Listings
+\usepackage{listings}
+\usepackage{lstlinebgrd}
+\input{contents/listingsDefinitions.tex}
+
+%For Abbreviations
+\usepackage[printonlyused]{acronym}
+
+%For Headers and Footers
+\usepackage{fancyhdr}
+\input{contents/HeadersFooters.tex}
+
+\input{contents/Constants.tex}
+\begin{document}
+\onehalfspacing
+\setlength\epigraphrule{0pt}
+\setlength{\epigraphwidth}{0.8\textwidth}
+\renewcommand{\epigraphflush}{flushleft}
+
+\bibliography{resources}
+\input{contents/TitlePage.tex}
+\pagenumbering{gobble}
+
+\tableofcontents 
+\newpage
+\input{contents/acronyms.tex}
+%\setcounter{chapter}{2}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\begin{abstract}
+I think I spider, we should write one page of abstract!
+\end{abstract}
+
+\chapter{Introduction}
+
+\input{contents/chapters/intro.tex}
+
+\chapter{System Design}
+
+\chapter{Data Acquisition and Data Analysis}
+
+\input{contents/Registers.tex}
+
+\end{document}
