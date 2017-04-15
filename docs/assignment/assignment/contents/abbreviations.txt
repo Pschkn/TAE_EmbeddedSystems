@@ -1,0 +1,46 @@
+\acro{ADAS}{Advanced Driver Assistance Systems}
+\acro{ARP}{Address Resolution Protocol}
+\acro{CSMA/CD}{Carrier Sense Multiple Access/Collision Detection}
+\acro{CPU}{Central Processing Unit}
+\acro{CRC}{Cyclic Redundancy Check}
+\acro{DHCPv6}{Dynamic Host Configuration Protocol Version 6}
+\acro{DNS}{Domain Name System}
+\acro{EOL}{End of Options List}
+\acro{FTP}{File Transfer Protocol}
+\acro{GUA}{Global Unicast Address}
+\acro{HTTP}{Hypertext Transfer Protocol}
+\acro{ICMPv4}{Internet Control Message Protocol Version 4}
+\acro{ICMPv6}{Internet Control Message Protocol Version 6}
+\acro{ICMP}{Internet Control Message Protocol}
+\acro{IEEE}{Institute of Electrical and Electronics Engineers}
+\acro{IGMP}{Internet Group Management Protocol}
+\acro{IMAP}{Internet Message Access Protocol}
+\acro{IPv4}{Internet Protocol Version 4}
+\acro{IPv6}{Internet Protocol Version 6}
+\acro{IP}{Internet Protocol}
+\acro{ISO}{International Organization for Standardization}
+\acro{JVM}{Java Virtual Machine}
+\acro{LAN}{Local Area Network}
+\acro{LLA}{Local Link Address}
+\acro{LLC}{Logical Link Control}
+\acro{LLMNR}{Link-Local Multicast Name Resolution}
+\acro{MAC}{Medium Access Control}
+\acro{MIME}{Multipurpose Internet Mail Extensions}
+\acro{MTU}{Maximum Transmission Unit}
+\acro{OSI}{Open Systems Interconnection}
+\acro{PDU}{Protocol Data Unit}
+\acro{QoS}{Quality of Service}
+\acro{RARP}{Reverse Address Resolution Protocol}
+\acro{RFC}{Requests for Comments}
+\acro{RMI}{Remote Method Invocation}
+\acro{RPC}{Remote Procedure Call}
+\acro{RTP}{Real-Time Transport Protocol}
+\acro{SDU}{Service Data Unit}
+\acro{SSDP}{Simple Service Discovery Protocol}
+\acro{TCP}{Transmission Control Protocol}
+\acro{ToS}{Type of Service}
+\acro{TTL}{Time-to-Live}
+\acro{UDP}{User Datagram Protocol}
+\acro{UTC}{Coordinated Universal Time}
+\acro{UUID}{Universally Unique Identifier}
+\acro{VPN}{Virtual Private Network}
