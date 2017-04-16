@@ -2,12 +2,12 @@ The upfront steps that were taken to create a shared understanding and to
 examine possible solutions in building the application are shortly presented in
 the current section.
 
-\subsection{Determination of the Use Cases}
+\subsection{Use Cases}
 SmartCart in its final scope addresses two main use cases: the use case of
 creating a shopping list and adding items to it as well as the process of going
-shopping itself. The use case ``Go shopping’’ implements the main user
-interaction that consists of switching to the previous / next item and of
-marking an item of the shopping list as ‘added to cart’. This interaction takes
+shopping itself (see \ref{fig:UseCases}). The use case ``Go shopping''
+implements the main user interaction that consists of switching to the previous / next item and of
+marking an item of the shopping list as `added to cart'. This interaction takes
 place via gestures made by the user with its smartphone and detected by the
 SmartCart application.
 
@@ -22,10 +22,33 @@ SmartCart application.
 \subsection{Relations between the captured Gestures
 and the used Sensors}
 
+Figure \ref{fig:DataModel} shows a model of how the smartphone, the sensors and
+the gestures that should be recognized are related to each other. The
+acceleration sensor provides information about the smartphone's speed-up along
+its coordinate axes. In the most cases, these axes are not aligned with the
+standard x-y-z axes because of the smartphones orientation. Since the
+orientation affects the measured acceleration values, it has to be taken into
+account when recognizing the user's gestures.
+
 \begin{figure}
 \centering
 \captionsetup{justification=centering}
 \includegraphics[width=\textwidth]{res/sa/UserGestureDataModel.png}
 \caption{Data Model of the User Gestures to recognize}
-\label{fig:UseCases}
+\label{fig:DataModel}
+\end{figure}
+
+\subsection{Application Context}
+The context of the application can be retrieved from figure \ref{fig:context}.
+The inputs are the values of the accelerometer $a_x$, $a_y$ and $a_z$ as well as
+the angles $azimuth$, $pitch$ and $roll$ that determine the smartphones
+orientation. The current state and any other information of the application are
+visualized on the smartphone's display.
+
+\begin{figure}
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=\textwidth]{res/sa/ContextDiagram.png}
+\caption{Context of the Application to develop}
+\label{fig:context}
 \end{figure}
