@@ -1,27 +1,69 @@
-\begin{table}
+In the following sections, the idea and implementation of Smart Cart -- an
+Android application that will simplify your shopping experience -- will be
+exposed. The application was created in the course of the workshop
+``\assignmentName'' by the team IoT-Designers:
+
+\begin{table}[h]
 \renewcommand\arraystretch{1}
-\begin{tabular}{p{0.23\textwidth}p{0.23\textwidth}p{0.23\textwidth}p{0.23\textwidth}}
-\begin{center}Markus\end{center} & 
-\begin{center}Simon\end{center} & 
+\centering
+\begin{tabular}{p{0.21\textwidth}p{0.21\textwidth}p{0.21\textwidth}p{0.21\textwidth}}
+\begin{center}Timo\end{center} & 
 \begin{center}Wojciech\end{center} & 
-\begin{center}Timo\end{center}
+\begin{center}Markus\end{center} & 
+\begin{center}Simon\end{center}
 \\
-\vspace{-1.2cm}\begin{center}Just\end{center} & 
-\vspace{-1.2cm}\begin{center}Schneider\end{center} & 
-\vspace{-1.2cm}\begin{center}Lesnianski\end{center} & 
-\vspace{-1.2cm}\begin{center}Acquistapace\end{center}
+\vspace{-1.25cm}\begin{center}Acquistapace\end{center} & 
+\vspace{-1.25cm}\begin{center}Lesnianski\end{center} & 
+\vspace{-1.25cm}\begin{center}Just\end{center} & 
+\vspace{-1.25cm}\begin{center}Schneider\end{center}
 \\
-\vspace{-1cm}\begin{center}\includegraphics[width=0.2\textwidth]{res/intro/Markus.png}\end{center}
+\vspace{-1cm}\begin{center}\includegraphics[width=0.2\textwidth]{res/intro/Timo.png}\end{center}
 & 
-\vspace{-1cm}\begin{center}\includegraphics[width=0.2\textwidth]{res/intro/Simon.png}\end{center}
-&
 \vspace{-1cm}\begin{center}\includegraphics[width=0.2\textwidth]{res/intro/Ich.png}\end{center}
 &
-\vspace{-1cm}\begin{center}\includegraphics[width=0.2\textwidth]{res/intro/Timo.png}\end{center}
+\vspace{-1cm}\begin{center}\includegraphics[width=0.2\textwidth]{res/intro/Markus.png}\end{center}
+&
+\vspace{-1cm}\begin{center}\includegraphics[width=0.2\textwidth]{res/intro/Simon.png}\end{center}
 \\
 \vspace{-1cm}\begin{center}Project Leader\end{center} & 
-\vspace{-1cm}\begin{center}Dumbass\end{center} & 
-\vspace{-1cm}\begin{center}Moron\end{center} &
-\vspace{-1cm}\begin{center}Idiot \end{center}
+\vspace{-1cm}\begin{center}Developer\end{center} & 
+\vspace{-1cm}\begin{center}Data Analyst\end{center} &
+\vspace{-1cm}\begin{center}Documentation Manager \end{center}
 \end{tabular}
 \end{table}
+
+\section{Introduction}
+Since the idea of SmartCart evolved during the workshop, this section firstly
+introduces the initial product idea of Smart Cart and the change of scope that
+project went through. Later on, the architecture, the state machine and the
+technology stack that is used are described. For the purpose of developing the
+application Smart Cart, a data collection and data analysis had to take place.
+These steps are described in the section \ref{sect:dataAnalysis}.
+
+\subsection{Initial Idea of Smart Cart}
+The first concept of smart cart was to offer its user the possibility to add
+items to a shopping list and to get this shopping list ordered automatically as
+the user enters a supermarket. The entered grocery is determined with the help
+of the Here API. Based on the knowledge of the accessed shop and the ordering of
+its departments, the items that were previously added to the shopping list,
+should be ordered.
+
+\subsection{Change of Scope and final Idea of Smart Cart}
+Even though the initial idea of Smart Cart would have been a very helpful
+application to the user, it is strongly based on the collaboration with the
+operators of the supported supermarkets. This is especially true for the data
+acquisition regarding the offered products and the available departments of a
+supermarket. Therefore, the initial scope of the application was changed towards
+an application that is less dependent on master data.
+
+The revised concept of Smart Cart focusses more on the interaction of the user
+and the application. It omits the features of recognising a shop that is entered
+and ordering the list of shopping items according to the recognised shop.
+Instead, the application should offer the possibility of easily marking an item
+as ‘added to the cart’ and of navigating through the list via gestures. The
+recognition of gestures is done via the built-in sensors for acceleration and
+the gyroscope.
+
+Even the initial idea was discarded during the workshop for the mentioned
+reasons, the focus that is now put on the user interaction might might also
+support the initial idea. 

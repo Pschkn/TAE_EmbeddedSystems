@@ -96,18 +96,6 @@ on Shopping List</panel_attributes>
     <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
-    <id>UMLActor</id>
-    <coordinates>
-      <x>1220</x>
-      <y>210</y>
-      <w>100</w>
-      <h>130</h>
-    </coordinates>
-    <panel_attributes>Acceleration
-Sensor</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
       <x>370</x>
@@ -152,17 +140,6 @@ Item on Shopping List</panel_attributes>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
     <additional_attributes>60.0;10.0;10.0;70.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLActor</id>
-    <coordinates>
-      <x>1220</x>
-      <y>330</y>
-      <w>100</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>Gyroscope</panel_attributes>
-    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
@@ -218,5 +195,32 @@ Item on Shopping List</panel_attributes>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1240</x>
+      <y>220</y>
+      <w>130</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;actor&gt;&gt;
+Acceleration
+Sensor
+valign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1240</x>
+      <y>340</y>
+      <w>130</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;actor&gt;&gt;
+Gyroscope
+valign=center</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>620</x>
+      <y>330</y>
+      <w>110</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Smart 
+Cart</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>300</x>
+      <y>280</y>
+      <w>120</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>
+Accelerometer
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>300</x>
+      <y>440</y>
+      <w>120</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>
+Gyroscope
+
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>310</y>
+      <w>230</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>
+a_x
+a_y
+a_z
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>210.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>380</y>
+      <w>230</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>
+    azimuth
+    roll
+    pitch
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>210.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>910</x>
+      <y>350</y>
+      <w>120</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>
+Display
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>360</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>current state /
+visualisation
+lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>
