@@ -1,0 +1,37 @@
+\subsubsection{Acceleration depending on Pitch}
+\newpage
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.6\textwidth}
+        \centering
+        \captionsetup{justification=centering}
+        \input{res/mathstuff/yPitch.tex}
+        \caption{$a_y$ depending on Pitch}
+    \end{minipage}% <- sonst wird hier ein Leerzeichen eingefügt
+    \hfill
+    \begin{minipage}{0.25\textwidth}
+        \centering
+			\begin{align*} 
+				a_{z, handy} &= \tan(\alpha) \cdot {a_{y, handy}}\\
+				a_y &= \frac{a_{y, handy}}{\cos(\alpha)}
+			\end{align*}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.6\textwidth}
+        \centering
+        \captionsetup{justification=centering}
+        \input{res/mathstuff/zPitch.tex}
+        \caption{$a_z$ depending on Pitch}
+    \end{minipage}% <- sonst wird hier ein Leerzeichen eingefügt
+    \hfill
+    \begin{minipage}{0.25\textwidth}
+        \centering
+			\begin{align*} 
+				a_{y, handy} &= \tan(\alpha) \cdot a_{z, handy}\\ 
+				a_z &= \frac{a_{z, handy}}{\cos(\alpha)}
+			\end{align*}
+    \end{minipage}
+\end{figure}

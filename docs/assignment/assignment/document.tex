@@ -5,6 +5,7 @@
 \usepackage[british]{babel}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{amsfonts}
 \usepackage{pgfplotstable}
 \usepackage{pgfplots}
 \usepackage{natbib}
@@ -14,6 +15,11 @@
 %Diagramme
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usetikzlibrary{calc,patterns,angles,quotes}
+\usepackage{graphicx}
 
 \usepackage[singlelinecheck=false,font={footnotesize, it}, tablewithin=section,
 figurewithin=section,format=hang]{caption}
@@ -67,6 +73,9 @@ I think I spider, we should write one page of abstract!
 
 \section{Data Acquisition and Data Analysis}
 \label{sect:dataAnalysis}
+
+\subsection{Mathematical Basics}
+\input{contents/chapters/mathematicalBasics.tex}
 
 \input{contents/Registers.tex}
 
