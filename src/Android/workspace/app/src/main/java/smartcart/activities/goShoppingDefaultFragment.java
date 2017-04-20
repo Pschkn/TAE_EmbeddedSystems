@@ -115,23 +115,11 @@ public class goShoppingDefaultFragment extends Fragment {
         // registering sensors
         if(mSensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER).size()!=0){
             Sensor s = mSensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER).get(0);
-            mSensorManager.registerListener(sel,s, SensorManager.SENSOR_DELAY_NORMAL);
-        }
-        if(mSensorManager.getSensorList(Sensor.TYPE_GYROSCOPE).size()!=0){
-            Sensor s = mSensorManager.getSensorList(Sensor.TYPE_GYROSCOPE).get(0);
-            mSensorManager.registerListener(sel,s, SensorManager.SENSOR_DELAY_NORMAL);
-        }
-        if(mSensorManager.getSensorList(Sensor.TYPE_ROTATION_VECTOR).size()!=0){
-            Sensor s = mSensorManager.getSensorList(Sensor.TYPE_ROTATION_VECTOR).get(0);
-            mSensorManager.registerListener(sel,s, SensorManager.SENSOR_DELAY_NORMAL);
+            mSensorManager.registerListener(sel,s, SensorManager.SENSOR_DELAY_FASTEST);
         }
         if(mSensorManager.getSensorList(Sensor.TYPE_MAGNETIC_FIELD).size()!=0){
             Sensor s = mSensorManager.getSensorList(Sensor.TYPE_MAGNETIC_FIELD).get(0);
-            mSensorManager.registerListener(sel,s, SensorManager.SENSOR_DELAY_NORMAL);
-        }
-        if(mSensorManager.getSensorList(Sensor.TYPE_GRAVITY).size()!=0){
-            Sensor s = mSensorManager.getSensorList(Sensor.TYPE_GRAVITY).get(0);
-            mSensorManager.registerListener(sel,s, SensorManager.SENSOR_DELAY_NORMAL);
+            mSensorManager.registerListener(sel,s, SensorManager.SENSOR_DELAY_FASTEST);
         }
         return;
     }
