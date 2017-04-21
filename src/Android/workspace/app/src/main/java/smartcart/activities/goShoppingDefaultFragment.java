@@ -17,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -146,6 +147,11 @@ public class goShoppingDefaultFragment extends Fragment {
         boughtAdapter.notifyDataSetChanged();
 
         currentItemTV.setText(shoppingList.GetCurrentItem());
+    }
+
+    public void DisplayToast(String msg){
+        Toast.makeText(getActivity(), msg,
+                Toast.LENGTH_SHORT).show();
     }
 
     public void UpdateCurrentItem(){
