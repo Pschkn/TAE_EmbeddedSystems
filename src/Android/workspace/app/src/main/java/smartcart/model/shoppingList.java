@@ -48,6 +48,8 @@ public class shoppingList {
 
     //BoughtList
     public static void BuyItem(int index){
+        if (myList.size() <= 0) return;
+
         myBoughtList.add(myList.get(index));
         myList.remove(index);
 
