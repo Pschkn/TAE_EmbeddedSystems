@@ -6,22 +6,32 @@
     density="xxhdpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1492788451311"
+    timestamp="1492790150757"
     token="-5911692027873954737"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="150" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="7" />
     <task
         name="verifier"
-        duration="0" />
+        duration="3" />
+
+    <artifact
+        location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\Master\Embedded GIT\src\Android\workspace\app\build\outputs\apk\app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
@@ -74,8 +84,19 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1492788246261"
+        timestamp="1492789976053"
         verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\outputs\apk\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1492790150757"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
         <artifact
             location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
@@ -83,9 +104,5 @@
             location="D:\Master\Embedded GIT\src\Android\workspace\app\build\outputs\apk\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
-    <build
-        build-mode="COLD"
-        timestamp="1492788451311"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>
