@@ -1,4 +1,4 @@
-In the following sections, the idea and implementation of Smart Cart -- an
+In the following sections, the idea and implementation of SmartCart -- an
 Android application that will simplify your shopping experience -- will be
 exposed. The application was created in the course of the workshop
 ``\assignmentName'' by the team IoT-Designers:
@@ -34,29 +34,30 @@ exposed. The application was created in the course of the workshop
 
 \section{Introduction}
 Since the idea of SmartCart evolved during the workshop, this section firstly
-introduces the initial product idea of Smart Cart and the change of scope that
-project went through. Later on, the architecture, the state machine and the
-technology stack that is used are described. For the purpose of developing the
-application Smart Cart, a data collection and data analysis had to take place.
-These steps are described in the section \ref{sect:dataAnalysis}.
+introduces the initial product idea of SmartCart and the change of scope that
+project went through. Later on, the architecture and the system's context
+as well as the used state machine and its evolution are described. The following
+sections focus on the recognition of gestures. For this purpose, the
+mathematical basics that are necessary to recognize gestures are derived and the
+gestures that are used to control the system are introduced.
 
-\subsection{Initial Idea of Smart Cart}
-The first concept of smart cart was to offer its user the possibility to add
+\subsection{Initial Idea of SmartCart}
+The first concept of SmartCart was to offer its user the possibility to add
 items to a shopping list and to get this shopping list ordered automatically as
 the user enters a supermarket. The entered grocery is determined with the help
-of the Here API. Based on the knowledge of the accessed shop and the ordering of
-its departments, the items that were previously added to the shopping list,
+of the Microsoft Here API. Based on the knowledge of the accessed shop and the
+ordering of its departments, the items that were previously added to the shopping list,
 should be ordered.
 
-\subsection{Change of Scope and final Idea of Smart Cart}
-Even though the initial idea of Smart Cart would have been a very helpful
+\subsection{Change of Scope and final Idea of SmartCart}
+Even though the initial idea of SmartCart would have been a very helpful
 application to the user, it is strongly based on the collaboration with the
 operators of the supported supermarkets. This is especially true for the data
 acquisition regarding the offered products and the available departments of a
 supermarket. Therefore, the initial scope of the application was changed towards
 an application that is less dependent on master data.
 
-The revised concept of Smart Cart focusses more on the interaction of the user
+The revised concept of SmartCart focusses more on the interaction of the user
 and the application. It omits the features of recognising a shop that is entered
 and ordering the list of shopping items according to the recognised shop.
 Instead, the application should offer the possibility of easily marking an item
@@ -65,5 +66,5 @@ recognition of gestures is done via the built-in sensors for acceleration and
 the gyroscope.
 
 Even the initial idea was discarded during the workshop for the mentioned
-reasons, the focus that is now put on the user interaction might might also
+reasons, the focus that is now put on the user interaction might nevertheless
 support the initial idea. 
