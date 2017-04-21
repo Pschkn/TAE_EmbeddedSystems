@@ -65,7 +65,8 @@ public class goShoppingDefaultFragment extends Fragment {
         mp = MediaPlayer.create(getActivity().getApplicationContext(), R.raw. beep5);
 
         // Sensors
-        sel = new sensorListener(mp);
+        if(sel==null)
+            sel = new sensorListener(mp);
         mSensorManager  = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
         //mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
 
@@ -76,8 +77,7 @@ public class goShoppingDefaultFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
-        sel.SetAdapters(toBuyAdapter, boughtAdapter);
-        sel.SetTextView(currentItemTV);
+        sel.setFragment(this);
 
         currentItemTV.setText(shoppingList.GetCurrentItem());
 
@@ -139,6 +139,13 @@ public class goShoppingDefaultFragment extends Fragment {
     public void SetAdapters(ArrayAdapter<String> toBuyAdapter, ArrayAdapter<String> boughtAdapter){
         this.toBuyAdapter = toBuyAdapter;
         this.boughtAdapter = boughtAdapter;
+    }
+
+    public void UpdateMe(){
+        toBuyAdapter.notifyDataSetChanged();
+        boughtAdapter.notifyDataSetChanged();
+
+        currentItemTV.setText(shoppingList.GetCurrentItem());
     }
 
     public void UpdateCurrentItem(){

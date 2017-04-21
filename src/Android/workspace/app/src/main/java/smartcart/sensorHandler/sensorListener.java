@@ -14,6 +14,7 @@ import com.google.android.gms.ads.identifier.AdvertisingIdClient;
 import com.google.android.gms.drive.query.internal.MatchAllFilter;
 
 import smartcart.activities.R;
+import smartcart.activities.goShoppingDefaultFragment;
 import smartcart.model.shoppingList;
 
 /**
@@ -45,10 +46,7 @@ public class sensorListener implements SensorEventListener {
     boolean xValueReached = false;
     boolean zValueReached = false;
     //--- -------------------------
-    ArrayAdapter<String> toBuyAdapter;
-    ArrayAdapter<String> boughtAdapter;
-
-    TextView currentItemTextView;
+    goShoppingDefaultFragment parentFragment;
 
     MediaPlayer mp;
     int currentVolume = 1;
@@ -65,7 +63,6 @@ public class sensorListener implements SensorEventListener {
 
     public sensorListener(MediaPlayer mp){
         this.mp = mp;
-
     }
     @Override
     public void onSensorChanged(SensorEvent event) {
@@ -88,6 +85,7 @@ public class sensorListener implements SensorEventListener {
 
             if (event.sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD)
                 mGeomagnetic = event.values;
+
             if (mGravity != null && mGeomagnetic != null) {
                 float R[] = new float[9];
                 float I[] = new float[9];
@@ -117,9 +115,9 @@ public class sensorListener implements SensorEventListener {
         }
         return;
     }
-int i=0;
+
     private void processData(){
-        //Log.i("CalcNo: ", String.valueOf(i++));
+
         // calculation
         float currentAx = calcAx(lastAx, lastAy, lastAz, lastRoll, lastAzimut);
         float currentAz = calcAz(lastAx, lastAy, lastAz, lastPitch, lastRoll);
@@ -153,20 +151,20 @@ int i=0;
                 "#" + lastAx + "#" + lastAy + "#" + lastAz);
         switch (state){
             case 0:
- //               Log.i("State 0: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz));
+                Log.i("State 0: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz) +
+                        "#" + lastAx + "#" + lastAy + "#" + lastAz);
+
                 if (currentAx < +100 && currentAx > +5)
                     xValueReached = true;
-                if (currentAz > -100 && currentAz < -3)
+                if (currentAz > 1 && currentAz < 100)
                     zValueReached = true;
                 if (xValueReached && zValueReached){
                     nextState();
                 }
                 break;
             case 1:
-                Log.i("State 1: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz) +
-                "#" + lastAx + "#" + lastAy + "#" + lastAz);
-
-                if (currentAx < -5 && currentAx > -100)
+ //               Log.i("State 1: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz));
+                if (currentAx < +100 && currentAx > +5)
                     xValueReached = true;
                 if (currentAz > -100 && currentAz < -3)
                     zValueReached = true;
@@ -180,7 +178,7 @@ int i=0;
 
                 if (currentAx < -5 && currentAx > -100)
                     xValueReached = true;
-                if (currentAz > 3 && currentAz < 100)
+                if (currentAz > -100 && currentAz < -3)
                     zValueReached = true;
                 if (xValueReached && zValueReached){
                     nextState();
@@ -188,11 +186,11 @@ int i=0;
                 break;
             case 3:
                 Log.i("State 3: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz) +
-                        "#" + lastAx + "#" + lastAy + "#" + lastAz);
+                "#" + lastAx + "#" + lastAy + "#" + lastAz);
 
-                if (currentAx < +100 && currentAx > +5)
+                if (currentAx < -5 && currentAx > -100)
                     xValueReached = true;
-                if (currentAz > 1 && currentAz < 100)
+                if (currentAz > 3 && currentAz < 100)
                     zValueReached = true;
                 if (xValueReached && zValueReached){
                     nextState();
@@ -205,17 +203,16 @@ int i=0;
     }
 
     private void nextState(){
+        Log.i("NextState", String.valueOf(state));
         state++;
         xValueReached = false;
         zValueReached = false;
-        if (state<4){ // another valid state
+        if (state <= 3){ // another valid state
             stateStartedTime = System.nanoTime();
         }
         else{
             shoppingList.BuyItem(0);
-            toBuyAdapter.notifyDataSetChanged();
-            boughtAdapter.notifyDataSetChanged();
-            currentItemTextView.setText(shoppingList.GetCurrentItem());
+            parentFragment.UpdateMe();
             state = 0;
         }
     }
@@ -231,13 +228,8 @@ int i=0;
         return;
     }
 
-    public void SetAdapters(ArrayAdapter<String> toBuyAdapter, ArrayAdapter<String> boughtAdapter){
-        this.toBuyAdapter = toBuyAdapter;
-        this.boughtAdapter = boughtAdapter;
-    }
-
-    public void SetTextView(TextView currentItemText){
-        currentItemTextView = currentItemText;
+    public void setFragment(goShoppingDefaultFragment fragment){
+        parentFragment = fragment;
     }
 
     @Override
