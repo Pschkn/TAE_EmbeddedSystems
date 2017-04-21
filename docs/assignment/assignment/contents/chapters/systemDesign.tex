@@ -22,6 +22,7 @@ SmartCart application.
 \subsection{Relations between the captured Gestures
 and the used Sensors}
 
+\label{sect:dataModel}
 Figure \ref{fig:DataModel} shows a model of how the smartphone, the sensors and
 the gestures that should be recognized are related to each other. The
 acceleration sensor provides information about the smartphone's speed-up along
@@ -52,3 +53,33 @@ visualized on the smartphone's display.
 \caption{Context of the Application to develop}
 \label{fig:context}
 \end{figure}
+
+
+\subsection{Finite State Machine}
+hier war noch nicht sicher welche gesten überhaupt verwendet werden und bla bla
+bla (vllt einfach ner murks state machine machen weil die vom dio der letzte
+rotz ist und absolut flasch)
+\subsubsection{First State Machine}
+auf jedenfall zuerst diese kackendreck state machin richtig falsch machen aber
+dennoch wenigstens halbwegs sinnvoll
+\begin{figure}
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=\textwidth]{res/sa/PresentationStateMachineOld.png}
+\caption{First Finite State Machine}
+\label{fig:first state machine}
+\end{figure}
+
+\subsubsection{Evolutioned State Machine}
+auch diese self übergänge erklären\ldots also alles darf passieren uznd er
+bleibt in diesem state
+
+\begin{figure}
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=\textwidth]{res/sa/PresentationStateMachineNew.png}
+\caption{Evolutioned Finite State Machine}
+\label{fig:evo state machine}
+\end{figure}
+
+
