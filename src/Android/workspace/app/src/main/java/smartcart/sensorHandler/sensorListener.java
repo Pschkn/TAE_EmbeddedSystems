@@ -5,16 +5,8 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.MediaPlayer;
-import android.provider.Settings;
 import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.gms.ads.identifier.AdvertisingIdClient;
-import com.google.android.gms.drive.query.internal.MatchAllFilter;
-
-import smartcart.activities.R;
 import smartcart.activities.goShoppingDefaultFragment;
 import smartcart.model.shoppingList;
 
@@ -40,7 +32,7 @@ public class sensorListener implements SensorEventListener {
     boolean newAccelValue = false;
 
     long stateStartedTime;
-    final long timeBetweenStates = 200;
+    final long timeBetweenStates = 350;
 
     boolean calculationRunning = false;
 
@@ -156,14 +148,16 @@ public class sensorListener implements SensorEventListener {
                 Log.i("State 0: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz) +
                         "#" + lastAx + "#" + lastAy + "#" + lastAz);
 
-                if (currentAx > -100 && currentAx < -3)
-                    xValueReached = true;
-                if (currentAz > 3 && currentAz < 100)
-                    zValueReached = true;
-                if (xValueReached && zValueReached){
-                    nextState();
+                if (currentAz > 3 && currentAx < -3)
+                {
+                    nextStateClockwise();
+                }
+                if (currentAz > 3 && currentAx > +3)
+                {
+                    nextStateCounterClockwise();
                 }
                 break;
+            //  ------ CLOCKWISE -------
             case 1:
                 Log.i("State 1: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz) +
                         "#" + lastAx + "#" + lastAy + "#" + lastAz);
@@ -173,11 +167,11 @@ public class sensorListener implements SensorEventListener {
                 if (currentAz > 3 && currentAz < 100)
                     zValueReached = true;
                 if (xValueReached && zValueReached){
-                    nextState();
+                    nextStateClockwise();
                     break;
                 }
                 // cancel
-                if (currentAz < 5)
+                if (currentAz < -5)
                     resetState(currentAx, currentAz);
                 break;
             case 2:
@@ -188,7 +182,7 @@ public class sensorListener implements SensorEventListener {
                 if (currentAz > -100 && currentAz < -3)
                     zValueReached = true;
                 if (xValueReached && zValueReached){
-                    nextState();
+                    nextStateClockwise();
                     break;
                 }
                 // cancel
@@ -204,12 +198,12 @@ public class sensorListener implements SensorEventListener {
                 if (currentAz > -100 && currentAz < -3)
                     zValueReached = true;
                 if (xValueReached && zValueReached){
-                    nextState();
+                    nextStateClockwise();
                     break;
                 }
                 // cancel
                 if (currentAz > 10)
-                    resetState(currentAx, currentAz);
+                    resetState(currentAx, 1234);
                 break;
             case 4:
                 Log.i("State 4: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz) +
@@ -220,20 +214,86 @@ public class sensorListener implements SensorEventListener {
                 if (currentAz > 5 && currentAz < 100)
                     zValueReached = true;
                 if (xValueReached && zValueReached){
-                    nextState();
+                    nextStateClockwise();
                     break;
                 }
                 // cancel
                 if (currentAx > 5)
                     resetState(currentAx, currentAz);
                 break;
+
+            //  ------ COUNTER - CLOCKWISE -------
+            case -1:
+                Log.i("State -1: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz) +
+                        "#" + lastAx + "#" + lastAy + "#" + lastAz);
+
+                if (currentAx < -5)
+                    xValueReached = true;
+                if (currentAz > 3 && currentAz < 100)
+                    zValueReached = true;
+                if (xValueReached && zValueReached){
+                    nextStateCounterClockwise();
+                    break;
+                }
+                // cancel
+                if (currentAz < -5)
+                    resetState(currentAx, currentAz);
+                break;
+            case -2:
+                //               Log.i("State -2: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz));
+
+                if (currentAx < -5)
+                    xValueReached = true;
+                if (currentAz > -100 && currentAz < -3)
+                    zValueReached = true;
+                if (xValueReached && zValueReached){
+                    nextStateCounterClockwise();
+                    break;
+                }
+                // cancel
+                if (currentAx > +5)
+                    resetState(currentAx, currentAz);
+                break;
+            case -3:
+                Log.i("State -3: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz) +
+                        "#" + lastAx + "#" + lastAy + "#" + lastAz);
+
+                if (currentAx > +5)
+                    xValueReached = true;
+                if (currentAz > -100 && currentAz < -3)
+                    zValueReached = true;
+                if (xValueReached && zValueReached){
+                    nextStateCounterClockwise();
+                    break;
+                }
+                // cancel
+                if (currentAz > 10)
+                    resetState(currentAx, 1234);
+                break;
+            case -4:
+                Log.i("State -4: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz) +
+                        "#" + lastAx + "#" + lastAy + "#" + lastAz);
+
+                if (currentAx > +5)
+                    xValueReached = true;
+                if (currentAz > 5 && currentAz < 100)
+                    zValueReached = true;
+                if (xValueReached && zValueReached){
+                    nextStateCounterClockwise();
+                    break;
+                }
+                // cancel
+                if (currentAx < -5)
+                    resetState(currentAx, currentAz);
+                break;
+
             default:
                 break;
         }
 
     }
 
-    private void nextState(){
+    private void nextStateClockwise(){
         Log.i("NextState", String.valueOf(state));
         state++;
         xValueReached = false;
@@ -244,6 +304,23 @@ public class sensorListener implements SensorEventListener {
         else{
             stateStartedTime = System.nanoTime();
             shoppingList.BuyItem(0);
+            parentFragment.UpdateMe();
+            parentFragment.DisplayToast("Circle Recognized!");
+            state = 0;
+        }
+    }
+
+    private void nextStateCounterClockwise(){
+        Log.i("NextState", String.valueOf(state));
+        state--;
+        xValueReached = false;
+        zValueReached = false;
+        if (state >= -4){ // another valid state
+            stateStartedTime = System.nanoTime();
+        }
+        else{
+            stateStartedTime = System.nanoTime();
+            shoppingList.UnBuyItem(0);
             parentFragment.UpdateMe();
             parentFragment.DisplayToast("Circle Recognized!");
             state = 0;
@@ -261,7 +338,7 @@ public class sensorListener implements SensorEventListener {
         if (state == 0) return;
         long currentlyPassedTime = (System.nanoTime() - stateStartedTime) / 1000000;
         if(currentlyPassedTime > timeBetweenStates) {
-            resetState(0,0);
+            resetState(0.1337f,0);
 
         }
         return;
