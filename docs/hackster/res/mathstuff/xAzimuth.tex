@@ -1,0 +1,51 @@
+  \begin{tikzpicture}
+	\newcommand{\cosAngle}{0.866}
+	\newcommand{\sinAngle}{0.5}
+	\newcommand{\sideLength}{2}
+	\newcommand{\handyLength}{4}
+	\newcommand{\hlh}{\handyLength/2}
+	\newcommand{\handyWidth}{2}
+	\newcommand{\hwh}{\handyWidth/2}
+	\newcommand{\padding}{0.25}
+
+	\begin{scope}[rotate=120]
+		\draw[rounded corners] (-\hlh,-\hwh) rectangle (\hlh,\hwh);
+		\draw[rounded corners] (-\hlh+\padding,-\hwh+\padding) rectangle (\hlh-\padding,\hwh-\padding);
+		\draw[dashed, black] (-\hlh,0)--(\hlh,0);
+		\draw[dashed, black] (0,-\hwh)--(0,\hwh);
+		\coordinate (begin_a_x) at (0, -\hwh);
+	\end{scope}
+	
+	\coordinate (end_a_x) at ($(begin_a_x)+(\sideLength,0)$);
+	\draw[very thick,red,->] (begin_a_x)  -- (end_a_x) node (x_real) [red,below] {$a_x$}; 
+
+	\coordinate (end_a_x_handy) at ($(begin_a_x)+(\cosAngle*\cosAngle*\sideLength,\sinAngle*\cosAngle*\sideLength)$);
+	\draw[thick,green,->] (begin_a_x)  -- (end_a_x_handy) node (x_handy) [green,above] {$a_{x, handy}$};
+	
+	\draw[thick,orange,->] (end_a_x_handy) -- (end_a_x) node (y_handy) [orange,above right] {$a_{y, handy}$};
+
+	\begin{scope}[rotate=30]
+		\coordinate (rotated) at (0,2);
+	\end{scope}
+    	
+	\coordinate (origo) at (0,0);
+    	\coordinate (point_on_z) at (0,2);
+
+	\coordinate (end_a_y) at (-\hlh - \sideLength*\cosAngle,-1);
+
+    	% draw axes
+    	\fill[black] (origo) circle (0.05);
+    	\draw[thick,green,->] (origo) -- ++(2,0) node[black,right] {$x$};
+    	\draw[thick,orange,->] (origo) -- ++(0,3) node (mary) [black,below left] {$y$};
+   	\draw[thick] ($ (origo) + (-1,0) $) -- ($ (origo) + (1,0) $);
+
+	% angle axes
+	\tkzMarkAngle[fill= blue,size=1.2cm,opacity=.4](point_on_z,origo,rotated)
+    	\pic [draw, ->, "$\gamma$", angle eccentricity=1.5] {angle =
+    	point_on_z--origo--rotated};
+
+	% angle vectors
+	\tkzMarkAngle[fill=
+	blue,size=1.2cm,opacity=.4](end_a_x,begin_a_x,end_a_x_handy) \pic [draw, ->,
+	"$\gamma$", angle eccentricity=1.5] {angle = end_a_x--begin_a_x--end_a_x_handy};
+  \end{tikzpicture}

@@ -1,0 +1,305 @@
+\documentclass[12pt, a4paper, oneside, british]{article}
+\usepackage{epigraph}
+\usepackage{setspace}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[british]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pgfplotstable}
+\usepackage{pgfplots}
+\usepackage{natbib}
+\usepackage[hyphens]{url}
+\bibliographystyle{abbrvnat}
+
+%Diagramme
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usetikzlibrary{calc,patterns,angles,quotes}
+\usepackage{graphicx}
+
+\usepackage[singlelinecheck=false,font={footnotesize, it}, tablewithin=section,
+figurewithin=section,format=hang]{caption}
+
+\usepackage{multirow}
+\usepackage{footnote}
+\makesavenoteenv{tabular}
+%To Use Float Barrier
+\usepackage{placeins}
+
+%For Listings
+\usepackage{listings}
+\usepackage{lstlinebgrd}
+
+
+%For Abbreviations
+\usepackage[printonlyused]{acronym}
+
+%For Headers and Footers
+\usepackage{fancyhdr}
+
+\begin{document}
+\onehalfspacing
+\setlength\epigraphrule{0pt}
+\setlength{\epigraphwidth}{0.8\textwidth}
+\renewcommand{\epigraphflush}{flushleft}
+
+\pagenumbering{gobble}
+
+%\setcounter{chapter}{2}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\section{Mathematical Basics of Gesture Recognition}
+The recognition of gestures is based on measured acceleration values. These
+values depend on
+the orientation of the smartphone. The mathematical relation of the measured
+acceleration values and the smartphone's orientation will be derived in this
+chapter. At first, the impact the smartphone being rotated along one of its axes
+is investigated in isolation. Afterwards, the results are combined and the final
+equation for each of the acceleration values is set up.
+
+\subsection{Terminology of the possible Rotations}
+
+\begin{figure}
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=0.75\textwidth]{res/mathstuff/rotations.jpg}
+\caption{Possibilities of rotating a Smartphone\protect\footnotemark}
+\label{fig:DataModel}
+\end{figure}
+
+\footnotetext{Taken from: http://objnux.1s.fr/index.php?post/2012/04/29/App-Inventor-\%3A-Premier-programme}
+There exist three different possible rotations that are measured by the gyroscope sensor:
+
+\begin{itemize}
+\item{
+\textbf{Pitch} \newline
+The angle of a rotation around the x-axis is called pitch. In the following
+equations, $\alpha$ will be used to describe the value of pitch that is
+retrieved from the gyroscope.
+}
+\item{
+\textbf{Roll} \newline
+The angle of a rotation around the y-axis is called roll. In the following
+equations, $\beta$ will be used to describe the value of roll that is retrieved
+from the gyroscope.
+}
+\item{
+\textbf{Azimuth} \newline
+The angle of a rotation around the z-axis is called azimuth. In the following
+equations, $\gamma$ will be used to describe the value of azimuth that is
+retrieved from the gyroscope.
+}
+\end{itemize}
+
+
+\subsection{Acceleration depending on Pitch}
+The current section investigates the effect of a rotation around the
+smartphone's x-axis on the measured acceleration values. Figures
+\ref{fig:yPitch} and \ref{fig:zPitch} show how accelerations in the direction of
+x and of z respectively might be decomposed into the different
+acceleration vectors that are parallel to the smartphone's axes. The 
+magnitudes of these vectors are measured by the smartphone's acceleration
+sensor.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \captionsetup{justification=centering}
+        \input{res/mathstuff/yPitch.tex}
+        \caption{$a_y$ depending on Pitch}
+        \label{fig:yPitch}
+    \end{minipage}% <- sonst wird hier ein Leerzeichen eingefügt
+    \hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+			\begin{align} 
+				a_{z, handy} &= \tan(\alpha) \cdot {a_{y, handy}}\\
+				a_y &= \frac{a_{y, handy}}{\cos(\alpha)}
+			\end{align}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \captionsetup{justification=centering}
+        \input{res/mathstuff/zPitch.tex}
+        \caption{$a_z$ depending on Pitch}
+        \label{fig:zPitch}
+    \end{minipage}% <- sonst wird hier ein Leerzeichen eingefügt
+    \hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+			\begin{align} 
+				a_{y, handy} &= \tan(\alpha) \cdot a_{z, handy}\\ 
+				a_z &= \frac{a_{z, handy}}{\cos(\alpha)}
+			\end{align}
+    \end{minipage}
+\end{figure}
+
+\FloatBarrier
+\subsection{Acceleration depending on Roll}
+A rotation around a certain axis affects the measured acceleration values of the
+axes that are parallel to axis of rotation. Therefore, if the smartphone is
+rotated around its y-axis, the accelerations in the direction of x and z have to
+be investigated. The composition of the acceleration vectors can be retrieved
+from the figures \ref{fig:xRoll} and \ref{fig:zRoll}.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \captionsetup{justification=centering}
+        \input{res/mathstuff/xRoll.tex}
+        \caption{$a_x$ depending on Roll}
+        \label{fig:xRoll}
+    \end{minipage}% <- sonst wird hier ein Leerzeichen eingefügt
+    \hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+			\begin{align} 
+				a_{z, handy} &= \tan(\beta) \cdot {a_{x, handy}}\\
+				a_x &= \frac{a_{x, handy}}{\cos(\beta)}
+			\end{align}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \captionsetup{justification=centering}
+        \input{res/mathstuff/zRoll.tex}
+        \caption{$a_z$ depending on Roll}
+        \label{fig:zRoll}
+    \end{minipage}% <- sonst wird hier ein Leerzeichen eingefügt
+    \hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+			\begin{align} 
+				a_{x, handy} &= \tan(\beta) \cdot a_{z, handy}\\ 
+				a_z &= \frac{a_{z, handy}}{\cos(\beta)}
+			\end{align}
+    \end{minipage}
+\end{figure}
+
+\FloatBarrier
+\subsection{Acceleration depending on Azimuth}
+The last rotation that is examined is the one around the z-axis. This rotation
+affects the measured acceleration values in the direction of x and y. The
+vector-decomposition is depicted in the figures \ref{fig:xAzimuth} and
+\ref{fig:yAzimuth}.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \captionsetup{justification=centering}
+        \input{res/mathstuff/xAzimuth.tex}
+        \caption{$a_x$ depending on Azimuth}
+        \label{fig:xAzimuth}
+    \end{minipage}% <- sonst wird hier ein Leerzeichen eingefügt
+    \hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+			\begin{align} 
+				a_{y, handy} &= \tan(\gamma) \cdot {a_{x, handy}}\\
+				a_x &= \frac{a_{x, handy}}{\cos(\gamma)}
+			\end{align}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \captionsetup{justification=centering}
+        \input{res/mathstuff/yAzimuth.tex}
+        \caption{$a_y$ depending on Azimuth}
+        \label{fig:yAzimuth}
+    \end{minipage}% <- sonst wird hier ein Leerzeichen eingefügt
+    \hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+			\begin{align} 
+				a_{x, handy} &= \tan(\gamma) \cdot a_{y, handy}\\ 
+				a_y &= \frac{a_{y, handy}}{\cos(\gamma)}
+			\end{align}
+    \end{minipage}
+\end{figure}
+
+\subsection{Final Equations for the Acceleration Values}
+After the acceleration values have been examined depending on each rotation
+value in isolation, the results are combined together in this section.
+
+\subsubsection{Final Equation: X-Acceleration }
+As it has been shown in the equations $(1.6)$ and $(1.10)$, the acceleration in
+the direction of x depends on the values of roll and azimuth. Combining these
+two equations leads to the following equation:
+
+\begin{equation}
+a_x = \frac{a_{x, handy}}{\cos(\beta) \cdot \cos(\gamma)}
+\end{equation}
+
+\noindent The measured value of $a_{x,handy}$ is affected in two cases:
+\begin{itemize}
+\item{if the handy is accelerated in the direction of z and the value of pitch is not equal to 0}
+\item{if the handy is accelerated in the direction of y and the value of azimuth is not equal to 0}
+\end{itemize}
+These affectations are defined by the equations $(1.7)$ and $(1.11)$. Taking
+these equations into account leads to the following, final equation:
+
+\begin{equation}
+a_x = \frac{a_{x, handy} \cdot (1 - \tan(\beta) \cdot a_{z, handy}
+- \tan(\gamma) \cdot a_{y, handy})}{\cos(\beta) \cdot \cos(\gamma)}
+\end{equation}
+
+\subsubsection{Final Equation: Y-Acceleration }
+The equations $(1.2)$ and $(1.12)$ show the dependency of an acceleration in the
+direction of y depending on the values of pitch and azimuth. If these equations
+are put together, the result is given by:
+
+\begin{equation}
+a_y = \frac{a_{y, handy}}{\cos(\alpha) \cdot \cos(\gamma)}
+\end{equation}
+
+\noindent The measured value of $a_{y,handy}$ is affected in two cases:
+\begin{itemize}
+\item{if the handy is accelerated in the direction of z and the value of pitch is not equal to 0}
+\item{if the handy is accelerated in the direction of x and the value of azimuth is not equal to 0}
+\end{itemize}
+Therefore, the equations $(1.3)$ and $(1.9)$ have to be included in the
+calculations.
+This leads to the following, final equation:
+
+\begin{equation}
+a_y = \frac{a_{y, handy} \cdot (1 - \tan(\alpha) \cdot a_{z, handy}
+- \tan(\gamma) \cdot a_{x, handy})}{\cos(\alpha) \cdot \cos(\gamma)}
+\end{equation}
+
+\subsubsection{Final Equation: Z-Acceleration }
+The basic equation for the acceleration in the direction of z is retrieved by assembling the equations $(1.4)$ and $(1.8)$ that define the accelerations dependency on the values of roll and pitch respectively. 
+\begin{equation}
+a_z = \frac{a_{z, handy}}{\cos(\alpha) \cdot \cos(\beta)}
+\end{equation}
+
+\noindent The measured value of $a_{z,handy}$ is affected in two cases:
+\begin{itemize}
+\item{if the handy is accelerated in the direction of y and the value of pitch is not equal to 0}
+\item{if the handy is accelerated in the direction of x and the value of roll is not equal to 0}
+\end{itemize}
+
+If these cases (see equations $(1.1)$ and $(1.5)$) are considered the final is given by:
+\begin{equation}
+a_z = \frac{a_{z, handy} \cdot (1 - \tan(\alpha) \cdot a_{y, handy}
+- \tan(\beta) \cdot a_{x, handy})}{\cos(\alpha) \cdot \cos(\beta)}
+\end{equation}
+
+\end{document}
