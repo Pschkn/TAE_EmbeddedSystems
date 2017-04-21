@@ -30,12 +30,13 @@ halign=center</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>300</x>
-      <y>440</y>
+      <y>430</y>
       <w>120</w>
-      <h>60</h>
+      <h>80</h>
     </coordinates>
     <panel_attributes>
-Gyroscope
+Magnetic Field
+Sensor
 
 halign=center</panel_attributes>
     <additional_attributes/>

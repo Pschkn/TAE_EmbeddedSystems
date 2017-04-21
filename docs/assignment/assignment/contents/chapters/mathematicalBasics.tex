@@ -16,26 +16,26 @@ equation for each of the acceleration values is set up.
 \label{fig:DataModel}
 \end{figure}
 
-There exist three different possible rotations that are measured by the gyroscope sensor:
+There exist three different possible rotations that are measured by the magnetic field sensor:
 
 \begin{itemize}
 \item{
 \textbf{Pitch} \newline
 The angle of a rotation around the x-axis is called pitch. In the following
 equations, $\alpha$ will be used to describe the value of pitch that is
-retrieved from the gyroscope.
+retrieved from the magnetic field sensor.
 }
 \item{
 \textbf{Roll} \newline
 The angle of a rotation around the y-axis is called roll. In the following
 equations, $\beta$ will be used to describe the value of roll that is retrieved
-from the gyroscope.
+from the magnetic field sensor.
 }
 \item{
 \textbf{Azimuth} \newline
 The angle of a rotation around the z-axis is called azimuth. In the following
 equations, $\gamma$ will be used to describe the value of azimuth that is
-retrieved from the gyroscope.
+retrieved from the magnetic field sensor.
 }
 \end{itemize}
 
@@ -193,7 +193,8 @@ a_x = \frac{a_{x, handy}}{\cos(\beta) \cdot \cos(\gamma)}
 
 \noindent The measured value of $a_{x,handy}$ is affected in two cases:
 \begin{itemize}
-\item{if the handy is accelerated in the direction of z and the value of pitch is not equal to 0}
+\item{if the handy is accelerated in the direction of z and the value of roll is
+not equal to 0}
 \item{if the handy is accelerated in the direction of y and the value of azimuth is not equal to 0}
 \end{itemize}
 These affectations are defined by the equations $(1.7)$ and $(1.11)$. Taking
@@ -206,7 +207,7 @@ a_x = \frac{a_{x, handy} \cdot (1 - \tan(\beta) \cdot a_{z, handy}
 
 \subsubsection{Final Equation: Y-Acceleration }
 The equations $(1.2)$ and $(1.12)$ show the dependency of an acceleration in the
-direction of y depending on the values of pitch and azimuth. If these equations
+direction of y on the values of pitch and azimuth. If these equations
 are put together, the result is given by:
 
 \begin{equation}
@@ -238,8 +239,8 @@ a_z = \frac{a_{z, handy}}{\cos(\alpha) \cdot \cos(\beta)}
 \item{if the handy is accelerated in the direction of y and the value of pitch is not equal to 0}
 \item{if the handy is accelerated in the direction of x and the value of roll is not equal to 0}
 \end{itemize}
-
-If these cases (see equations $(1.1)$ and $(1.5)$) are considered the final is given by:
+If these cases (see equations $(1.1)$ and $(1.5)$) are considered, the final
+equation is given by:
 \begin{equation}
 a_z = \frac{a_{z, handy} \cdot (1 - \tan(\alpha) \cdot a_{y, handy}
 - \tan(\beta) \cdot a_{x, handy})}{\cos(\alpha) \cdot \cos(\beta)}
