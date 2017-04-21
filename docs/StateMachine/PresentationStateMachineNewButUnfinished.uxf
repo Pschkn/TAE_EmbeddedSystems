@@ -16,22 +16,11 @@
     <id>UMLState</id>
     <coordinates>
       <x>800</x>
-      <y>230</y>
-      <w>120</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>Check Item</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLState</id>
-    <coordinates>
-      <x>800</x>
       <y>370</y>
       <w>120</w>
       <h>70</h>
     </coordinates>
-    <panel_attributes>Previous Item</panel_attributes>
+    <panel_attributes>Check Item</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -84,10 +73,9 @@ Gesture</panel_attributes>
 2. Start Shopping
 3. Gesture = Circle Clockwise
 4. Gesture = Circle Counterclockwise
-5. Gesture = Straight Down
-6. Action Finished
-7. Stop Shopping
-8. AppStop
+5. Action Finished
+6. Stop Shopping
+7. AppStop
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -107,35 +95,12 @@ Gesture</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>910</x>
-      <y>240</y>
-      <w>110</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-8.</panel_attributes>
-    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLSpecialState</id>
-    <coordinates>
-      <x>1000</x>
-      <y>250</y>
-      <w>20</w>
-      <h>20</h>
-    </coordinates>
-    <panel_attributes>type=final</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>910</x>
       <y>380</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-8.</panel_attributes>
+7.</panel_attributes>
     <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
   </element>
   <element>
@@ -176,18 +141,6 @@ Gesture</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>820</x>
-      <y>290</y>
-      <w>90</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-</panel_attributes>
-    <additional_attributes>70.0;10.0;70.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>820</x>
       <y>130</y>
       <w>90</w>
       <h>60</h>
@@ -205,20 +158,8 @@ Gesture</panel_attributes>
       <h>170</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-3.</panel_attributes>
+4.</panel_attributes>
     <additional_attributes>10.0;150.0;150.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>670</x>
-      <y>240</y>
-      <w>150</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-5.</panel_attributes>
-    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -229,7 +170,7 @@ Gesture</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-8.</panel_attributes>
+7.</panel_attributes>
     <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
   </element>
   <element>
@@ -252,7 +193,7 @@ Gesture</panel_attributes>
       <h>110</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-4.</panel_attributes>
+3.</panel_attributes>
     <additional_attributes>10.0;10.0;140.0;90.0</additional_attributes>
   </element>
   <element>
@@ -264,7 +205,7 @@ Gesture</panel_attributes>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-8.</panel_attributes>
+7.</panel_attributes>
     <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -287,7 +228,7 @@ Gesture</panel_attributes>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-8.</panel_attributes>
+7.</panel_attributes>
     <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -310,7 +251,7 @@ Gesture</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-7.</panel_attributes>
+6.</panel_attributes>
     <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
@@ -346,20 +287,8 @@ Gesture</panel_attributes>
       <h>130</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-6.</panel_attributes>
+5.</panel_attributes>
     <additional_attributes>160.0;110.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>670</x>
-      <y>260</y>
-      <w>150</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-6.</panel_attributes>
-    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -370,7 +299,7 @@ Gesture</panel_attributes>
       <h>150</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-6.</panel_attributes>
+5.</panel_attributes>
     <additional_attributes>130.0;10.0;10.0;130.0</additional_attributes>
   </element>
 </diagram>
