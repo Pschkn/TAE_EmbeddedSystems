@@ -3,19 +3,47 @@
 \begin{abstract}
 
 \begin{multicols}{2}
-Das vorliegende Dokument beschreibt das Produkt SmartCart des Teams
-IoT-Designers. Das Ziel der Anwendung ist es einen smarter Way of
-Shopping zu ermöglichen. The application offers the possibility of easily
-marking items as added to the cart and the navigating through a list via
-gestures, um den User beim Eimkaufen zu unterstüzten und entlasten. Therefore,
-the recognition of gestures is done via the built-in acceleration sensor. 
+% Das vorliegende Dokument beschreibt das Produkt SmartCart des Teams
+% IoT-Designers. Das Ziel der Anwendung ist es einen smarter Way of
+% Shopping zu ermöglichen. The application offers the possibility of easily
+% marking items as added to the cart and the navigating through a list via
+% gestures, um den User beim Eimkaufen zu unterstüzten und entlasten. Therefore,
+% the recognition of gestures is done via the built-in acceleration sensor in
+% combination with the magnetic field sensor.
 
-Anstatt umständlich mit Stift und Papier die Einkaufsliste abzuarbeiten soll
-diese App durch die Gesternsteuerung erleichertern. Dabei fokusiert sich diese
-App auf zwei use cases welche dem Benutzer angeboten werden. Dem Benutzer soll
-es ermöglicht werden mit einer Hand und einfachen jedoch eindeutigen Gesten
-sowohl zwischen den Items in der Einkaufsliste hin und her zu wechseln als auch
-die bereits gefundenen Items abzuhaken.
+% Anstatt umständlich mit Stift und Papier die Einkaufsliste abzuarbeiten soll
+% diese App durch die Gesternsteuerung erleichertern. Dabei fokusiert sich diese
+% App auf zwei use cases welche dem Benutzer angeboten werden. Dem Benutzer soll
+% es ermöglicht werden mit einer Hand und einfachen jedoch eindeutigen Gesten
+% sowohl zwischen den Items in der Einkaufsliste hin und her zu wechseln als auch
+% die bereits gefundenen Items abzuhaken.
+
+% To recognize the chosen gestures, the acceleration sensor and the magnetic field sensor are
+% used. The retrieved acceleration values are used to determine the movement that
+% is made. The magnetic field sensor sensor serves to recognize the orientation of the
+% smartphone and to be able to subtract out its influence out of the acceleration
+% values.
+
+% Um aus den von den Sensoren erhaltenen Werten Gesten abzuleiten wurden zunächst
+% Daten erfasst, welche die jeweilige Gesten wiederspiegeln. Damit die
+% verschiedenen Sensorwerte zuordbar sind, wurden mehrere Messungen durchgeführt.
+% Damit die Gesten, möglichst unabhängig von der Ausrichtung des Mobile Phones
+% durchführbar sind, werden verschiedene mathematischen Berechnungen benötigt.
+
+% Das Ende dieses Dokuments beschreibt das Ergebnis der App sowie deren Nutzung.
+This present document describes the product SmartCart of the team IoT-Designers.
+The aim of the application is to offer a smarter way of shopping to the users.
+The application offers the possibility of easily marking items as added to the
+cart and the navigation through a list via gestures, in order to support and
+relieve the user during shopping. Therefore, the recognition of gestures is done
+via the built-in acceleration sensor in combination with the magnetic field
+sensor.
+
+Instead of handling the shopping list with the help of pen and paper, this app
+should make this easier with gesture control. The main focus is on two use cases
+offered to the user. This allows the user to switch between the items in the
+shopping list with one hand and simple but unambiguous gestures, as well as to
+check off the already found items.
 
 To recognize the chosen gestures, the acceleration sensor and the magnetic field sensor are
 used. The retrieved acceleration values are used to determine the movement that
@@ -23,13 +51,13 @@ is made. The magnetic field sensor sensor serves to recognize the orientation of
 smartphone and to be able to subtract out its influence out of the acceleration
 values.
 
-Um aus den von den Sensoren erhaltenen Werten Gesten abzuleiten wurden zunächst
-Daten erfasst, welche die jeweilige Gesten wiedergeben. Damit die verschiedenen
-Sensorwerte zuordbar sind wurden viele Messungen durchgeführt. Damit die Gesten
-möglichst unabhängig der Ausrichtung des Mobile Phones durchführbar sind
-werden verschiedene mathematischen Berechnungen benötigt.
+In order to derive gestures from the values obtained from the sensors, data were
+first acquired which reflect the respective gestures. Various measurements were
+carried out in order to assign the different sensor values. In order for the
+gestures to be carried out independently of the orientation of the mobile phone,
+various mathematical calculations are additionally required.
 
-Das Ende dieses Dokuments beschreibt das Ergebnis der App sowie deren Nutzung.
+The end of this document describes the results of the app and how to use it.
 
 \end{multicols}
 \end{abstract}
