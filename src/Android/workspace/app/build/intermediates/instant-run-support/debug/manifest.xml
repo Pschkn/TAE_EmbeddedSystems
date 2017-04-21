@@ -38,6 +38,7 @@
         <activity
             android:name="smartcart.activities.MainActivity"
             android:label="Smart Cart"
+            android:launchMode="singleTop"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -6,10 +6,10 @@ the current section.
 SmartCart in its final scope addresses two main use cases: the use case of
 creating a shopping list and adding items to it as well as the process of going
 shopping itself (see \ref{fig:UseCases}). The use case ``Go shopping''
-implements the main user interaction that consists of switching to the previous / next item and of
-marking an item of the shopping list as `added to cart'. This interaction takes
-place via gestures made by the user with its smartphone and detected by the
-SmartCart application.
+implements the main user interaction that consists of switching the next item to
+buy and of marking an item of the shopping list as `added to cart'. This
+interaction takes place via gestures made by the user with its smartphone that
+are detected by the SmartCart application.
 
 \begin{figure}
 \centering
@@ -27,7 +27,7 @@ Figure \ref{fig:DataModel} shows a model of how the smartphone, the sensors and
 the gestures that should be recognized are related to each other. The
 acceleration sensor provides information about the smartphone's speed-up along
 its coordinate axes. In the most cases, these axes are not aligned with the
-standard x-y-z axes because of the smartphones orientation. Since the
+standard x-y-z axes because of the smartphone's orientation. Since the
 orientation affects the measured acceleration values, it has to be taken into
 account when recognizing the user's gestures.
 
@@ -74,6 +74,10 @@ dennoch wenigstens halbwegs sinnvoll
 auch diese self übergänge erklären\ldots also alles darf passieren uznd er
 bleibt in diesem state
 
+\textbf{Statemachine nochmals anpsassen weil weniger states inzwischen haben.
+Urhzeigersinn = abhaken, gegen=nächstes item. in start kann die liste angelegt
+werden usw und wenn mer nach rechts swiped ist das start shopping} 
+
 \begin{figure}
 \centering
 \captionsetup{justification=centering}
@@ -81,5 +85,4 @@ bleibt in diesem state
 \caption{Evolutioned Finite State Machine}
 \label{fig:evo state machine}
 \end{figure}
-
 

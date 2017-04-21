@@ -13,14 +13,14 @@ public class shoppingList {
 
     public static void InitShoppingList(){
         if(!myList.isEmpty()) return;
-        myList.add("Apfel");
+        myList.add("Apple");
         myList.add("Banana");
-        myList.add("Baum1");
-        myList.add("Baum2");
-        myList.add("Baum3");
-        myList.add("Baum4");
-        myList.add("Baum5");
-        myList.add("Baum6");
+        myList.add("Onion");
+        myList.add("Milk");
+        myList.add("Cheddar");
+        myList.add("Cola");
+        myList.add("Pizza");
+        myList.add("Water");
 
     }
     public static ArrayList<String> GetShoppingList(){
@@ -38,7 +38,7 @@ public class shoppingList {
     public static void DeleteListItemAt(int index) { myList.remove(index); }
 
     public static String GetCurrentItem(){
-        if(myList.size() == 0) return "";
+        if(myList.size() <= 0) return "";
         return myList.get(0);
     }
 
@@ -48,6 +48,8 @@ public class shoppingList {
 
     //BoughtList
     public static void BuyItem(int index){
+        if (myList.size() <= 0) return;
+
         myBoughtList.add(myList.get(index));
         myList.remove(index);
 
@@ -60,6 +62,7 @@ public class shoppingList {
     }
 
     public static void UnBuyItem(int index){
+        if(myBoughtList.size()<=0) return;
         myList.add(myBoughtList.get(index));
         myBoughtList.remove(index);
 
@@ -69,5 +72,12 @@ public class shoppingList {
             myList.set(i, myList.get(i-1));
             myList.set(i-1, temp);
         }
+    }
+
+    public static void SwitchOutItem(){
+        if(myList.size() < 2) return;
+        String tempItem = myList.get(0);
+        myList.remove(0);
+        myList.add(tempItem);
     }
 }

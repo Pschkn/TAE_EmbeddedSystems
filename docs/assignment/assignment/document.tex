@@ -23,10 +23,12 @@
 
 \usepackage[singlelinecheck=false,font={footnotesize, it}, tablewithin=section,
 figurewithin=section,format=hang]{caption}
+\usepackage{subcaption}
 
+\usepackage{multicol}
 \usepackage{multirow}
 \usepackage{footnote}
-\makesavenoteenv{tabular}
+\makesavenoteenv{tabular} 
 %To Use Float Barrier
 \usepackage{placeins}
 
@@ -43,6 +45,8 @@ figurewithin=section,format=hang]{caption}
 \input{contents/HeadersFooters.tex}
 
 \input{contents/Constants.tex}
+
+\setlength\columnsep{30pt} 
 \begin{document}
 \onehalfspacing
 \setlength\epigraphrule{0pt}
@@ -60,9 +64,8 @@ figurewithin=section,format=hang]{caption}
 \setcounter{page}{1}
 \pagenumbering{arabic}
 
-\begin{abstract}
-I think I spider, we should write one page of abstract!
-\end{abstract}
+
+\input{contents/chapters/abstract.tex}
 
 \chapter{Smart Cart - A smarter Way of Shopping}
 
@@ -73,10 +76,14 @@ I think I spider, we should write one page of abstract!
 
 %\section{Data Acquisition and Data Analysis}
 %\label{sect:dataAnalysis}
-
+\FloatBarrier 
 \section{Mathematical Basics of Gesture Recognition}
 \input{contents/chapters/mathematicalBasics.tex}
 
-\input{contents/Registers.tex}
+\FloatBarrier
+\section{Recognition of Gestures}
+\input{contents/chapters/gestureRecognition.tex}
 
+\input{contents/Registers.tex}
+ 
 \end{document}

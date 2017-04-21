@@ -29,9 +29,10 @@
       <x>470</x>
       <y>200</y>
       <w>120</w>
-      <h>30</h>
+      <h>50</h>
     </coordinates>
-    <panel_attributes>Gyroscope</panel_attributes>
+    <panel_attributes>Magnetic Field
+Sensor</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -99,12 +100,12 @@ Sensor</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>520</x>
-      <y>220</y>
+      <y>240</y>
       <w>30</w>
-      <h>130</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
