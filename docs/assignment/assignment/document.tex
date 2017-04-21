@@ -24,6 +24,7 @@
 \usepackage[singlelinecheck=false,font={footnotesize, it}, tablewithin=section,
 figurewithin=section,format=hang]{caption}
 
+\usepackage{multicol}
 \usepackage{multirow}
 \usepackage{footnote}
 \makesavenoteenv{tabular}
@@ -60,9 +61,8 @@ figurewithin=section,format=hang]{caption}
 \setcounter{page}{1}
 \pagenumbering{arabic}
 
-\begin{abstract}
-I think I spider, we should write one page of abstract!
-\end{abstract}
+
+\input{contents/chapters/abstract.tex}
 
 \chapter{Smart Cart - A smarter Way of Shopping}
 
