@@ -73,4 +73,11 @@ public class shoppingList {
             myList.set(i-1, temp);
         }
     }
+
+    public static void SwitchOutItem(){
+        if(myList.size() < 2) return;
+        String tempItem = myList.get(0);
+        myList.remove(0);
+        myList.add(tempItem);
+    }
 }

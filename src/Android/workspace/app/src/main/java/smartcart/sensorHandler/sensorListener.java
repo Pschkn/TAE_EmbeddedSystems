@@ -42,17 +42,10 @@ public class sensorListener implements SensorEventListener {
     goShoppingDefaultFragment parentFragment;
 
     MediaPlayer mp;
-    int currentVolume = 1;
-    boolean inUse = true;
-
 
     //---
     float[] mGravity;
     float[] mGeomagnetic;
-
-    // testwerte
-    boolean testBoolPlusZuerst = false;
-    boolean testBoolMinusZuerst = false;
 
     public sensorListener(MediaPlayer mp){
         this.mp = mp;
@@ -115,7 +108,6 @@ public class sensorListener implements SensorEventListener {
         // calculation
         float currentAx = calcAx(lastAx, lastAy, lastAz, lastRoll, lastAzimut);
         float currentAz = calcAz(lastAx, lastAy, lastAz, lastPitch, lastRoll);
-        //Log.i("Current Ax/Az: ", String.valueOf(currentAx)+ "/" + String.valueOf(currentAz));
         checkIfnextState(currentAx, currentAz);
     }
 
@@ -141,14 +133,9 @@ public class sensorListener implements SensorEventListener {
     }
 
     private void checkIfnextState(float currentAx, float currentAz){
-        Log.i("UnserKreis: ", String.valueOf(currentAx) + "/" + String.valueOf(currentAz) +
-                "#" + lastAx + "#" + lastAy + "#" + lastAz);
         switch (state){
             case 0:
-                Log.i("State 0: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz) +
-                        "#" + lastAx + "#" + lastAy + "#" + lastAz);
-
-                if (currentAz > 3 && currentAx < -3)
+               if (currentAz > 3 && currentAx < -3)
                 {
                     nextStateClockwise();
                 }
@@ -159,10 +146,7 @@ public class sensorListener implements SensorEventListener {
                 break;
             //  ------ CLOCKWISE -------
             case 1:
-                Log.i("State 1: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz) +
-                        "#" + lastAx + "#" + lastAy + "#" + lastAz);
-
-                if (currentAx < +100 && currentAx > +5)
+               if (currentAx < +100 && currentAx > +5)
                     xValueReached = true;
                 if (currentAz > 3 && currentAz < 100)
                     zValueReached = true;
@@ -175,9 +159,7 @@ public class sensorListener implements SensorEventListener {
                     resetState(currentAx, currentAz);
                 break;
             case 2:
- //               Log.i("State 2: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz));
-
-                if (currentAx < +100 && currentAx > +5)
+               if (currentAx < +100 && currentAx > +5)
                     xValueReached = true;
                 if (currentAz > -100 && currentAz < -3)
                     zValueReached = true;
@@ -190,9 +172,6 @@ public class sensorListener implements SensorEventListener {
                     resetState(currentAx, currentAz);
                 break;
             case 3:
-                Log.i("State 3: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz) +
-                "#" + lastAx + "#" + lastAy + "#" + lastAz);
-
                 if (currentAx < -5 && currentAx > -100)
                     xValueReached = true;
                 if (currentAz > -100 && currentAz < -3)
@@ -206,9 +185,6 @@ public class sensorListener implements SensorEventListener {
                     resetState(currentAx, 1234);
                 break;
             case 4:
-                Log.i("State 4: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz) +
-                "#" + lastAx + "#" + lastAy + "#" + lastAz);
-
                 if (currentAx < -5 && currentAx > -100)
                     xValueReached = true;
                 if (currentAz > 5 && currentAz < 100)
@@ -224,9 +200,6 @@ public class sensorListener implements SensorEventListener {
 
             //  ------ COUNTER - CLOCKWISE -------
             case -1:
-                Log.i("State -1: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz) +
-                        "#" + lastAx + "#" + lastAy + "#" + lastAz);
-
                 if (currentAx < -5)
                     xValueReached = true;
                 if (currentAz > 3 && currentAz < 100)
@@ -240,8 +213,6 @@ public class sensorListener implements SensorEventListener {
                     resetState(currentAx, currentAz);
                 break;
             case -2:
-                //               Log.i("State -2: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz));
-
                 if (currentAx < -5)
                     xValueReached = true;
                 if (currentAz > -100 && currentAz < -3)
@@ -255,9 +226,6 @@ public class sensorListener implements SensorEventListener {
                     resetState(currentAx, currentAz);
                 break;
             case -3:
-                Log.i("State -3: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz) +
-                        "#" + lastAx + "#" + lastAy + "#" + lastAz);
-
                 if (currentAx > +5)
                     xValueReached = true;
                 if (currentAz > -100 && currentAz < -3)
@@ -271,9 +239,6 @@ public class sensorListener implements SensorEventListener {
                     resetState(currentAx, 1234);
                 break;
             case -4:
-                Log.i("State -4: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz) +
-                        "#" + lastAx + "#" + lastAy + "#" + lastAz);
-
                 if (currentAx > +5)
                     xValueReached = true;
                 if (currentAz > 5 && currentAz < 100)
@@ -294,7 +259,6 @@ public class sensorListener implements SensorEventListener {
     }
 
     private void nextStateClockwise(){
-        Log.i("NextState", String.valueOf(state));
         state++;
         xValueReached = false;
         zValueReached = false;
@@ -305,13 +269,12 @@ public class sensorListener implements SensorEventListener {
             stateStartedTime = System.nanoTime();
             shoppingList.BuyItem(0);
             parentFragment.UpdateMe();
-            parentFragment.DisplayToast("Circle Recognized!");
+            parentFragment.DisplayToast("Item Added!");
             state = 0;
         }
     }
 
     private void nextStateCounterClockwise(){
-        Log.i("NextState", String.valueOf(state));
         state--;
         xValueReached = false;
         zValueReached = false;
@@ -320,9 +283,9 @@ public class sensorListener implements SensorEventListener {
         }
         else{
             stateStartedTime = System.nanoTime();
-            shoppingList.UnBuyItem(0);
+            shoppingList.SwitchOutItem();
             parentFragment.UpdateMe();
-            parentFragment.DisplayToast("Circle Recognized!");
+            parentFragment.DisplayToast("Item Switched!");
             state = 0;
         }
     }
