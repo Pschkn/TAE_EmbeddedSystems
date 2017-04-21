@@ -9,8 +9,7 @@
       <w>120</w>
       <h>70</h>
     </coordinates>
-    <panel_attributes>Recognise 
-Gesture</panel_attributes>
+    <panel_attributes>Do Activity</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -40,16 +39,17 @@ Gesture</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>380</x>
-      <y>420</y>
-      <w>100</w>
-      <h>100</h>
+      <x>740</x>
+      <y>230</y>
+      <w>140</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>Transitions
 
 1. StartApp
 2. Gesture
-3. StoppApp
+3. Acitivity Finished
+4. StoppApp
 
 </panel_attributes>
     <additional_attributes/>
@@ -86,7 +86,7 @@ Gesture</panel_attributes>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-8.</panel_attributes>
+4.</panel_attributes>
     <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -109,7 +109,7 @@ Gesture</panel_attributes>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-8.</panel_attributes>
+4.</panel_attributes>
     <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -132,7 +132,7 @@ Gesture</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-7.</panel_attributes>
+3.</panel_attributes>
     <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>

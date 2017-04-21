@@ -65,9 +65,10 @@ public class goShoppingDefaultFragment extends Fragment {
         mp = MediaPlayer.create(getActivity().getApplicationContext(), R.raw. beep5);
 
         // Sensors
-        sel = new sensorListener(mp);
+        if(sel==null)
+            sel = new sensorListener(mp);
         mSensorManager  = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
-        mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        //mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
 
         return rootView;
     }
@@ -75,6 +76,8 @@ public class goShoppingDefaultFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+
+        sel.setFragment(this);
 
         currentItemTV.setText(shoppingList.GetCurrentItem());
 
@@ -113,13 +116,17 @@ public class goShoppingDefaultFragment extends Fragment {
         });
 
         // registering sensors
-        if(mSensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER).size()!=0){
-            Sensor s = mSensorManager.getSensorList(Sensor.TYPE_ACCELEROMETER).get(0);
+        if(mSensorManager.getSensorList(Sensor.TYPE_LINEAR_ACCELERATION).size()!=0){
+            Sensor s = mSensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
             mSensorManager.registerListener(sel,s, SensorManager.SENSOR_DELAY_FASTEST);
         }
         if(mSensorManager.getSensorList(Sensor.TYPE_MAGNETIC_FIELD).size()!=0){
-            Sensor s = mSensorManager.getSensorList(Sensor.TYPE_MAGNETIC_FIELD).get(0);
-            mSensorManager.registerListener(sel,s, SensorManager.SENSOR_DELAY_FASTEST);
+            Sensor s = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
+            mSensorManager.registerListener(sel,s, SensorManager.SENSOR_DELAY_NORMAL);
+        }
+        if(mSensorManager.getSensorList(Sensor.TYPE_GRAVITY).size()!=0){
+            Sensor s = mSensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY);
+            mSensorManager.registerListener(sel,s, SensorManager.SENSOR_DELAY_NORMAL);
         }
         return;
     }
@@ -132,6 +139,13 @@ public class goShoppingDefaultFragment extends Fragment {
     public void SetAdapters(ArrayAdapter<String> toBuyAdapter, ArrayAdapter<String> boughtAdapter){
         this.toBuyAdapter = toBuyAdapter;
         this.boughtAdapter = boughtAdapter;
+    }
+
+    public void UpdateMe(){
+        toBuyAdapter.notifyDataSetChanged();
+        boughtAdapter.notifyDataSetChanged();
+
+        currentItemTV.setText(shoppingList.GetCurrentItem());
     }
 
     public void UpdateCurrentItem(){

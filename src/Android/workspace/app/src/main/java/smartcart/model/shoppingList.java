@@ -38,7 +38,7 @@ public class shoppingList {
     public static void DeleteListItemAt(int index) { myList.remove(index); }
 
     public static String GetCurrentItem(){
-        if(myList.size() == 0) return "";
+        if(myList.size() <= 0) return "";
         return myList.get(0);
     }
 
@@ -48,6 +48,8 @@ public class shoppingList {
 
     //BoughtList
     public static void BuyItem(int index){
+        if (myList.size() <= 0) return;
+
         myBoughtList.add(myList.get(index));
         myList.remove(index);
 
