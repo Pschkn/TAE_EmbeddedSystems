@@ -23,11 +23,12 @@
 
 \usepackage[singlelinecheck=false,font={footnotesize, it}, tablewithin=section,
 figurewithin=section,format=hang]{caption}
+\usepackage{subcaption}
 
 \usepackage{multicol}
 \usepackage{multirow}
 \usepackage{footnote}
-\makesavenoteenv{tabular}
+\makesavenoteenv{tabular} 
 %To Use Float Barrier
 \usepackage{placeins}
 
@@ -44,6 +45,8 @@ figurewithin=section,format=hang]{caption}
 \input{contents/HeadersFooters.tex}
 
 \input{contents/Constants.tex}
+
+\setlength\columnsep{30pt} 
 \begin{document}
 \onehalfspacing
 \setlength\epigraphrule{0pt}
@@ -77,6 +80,10 @@ figurewithin=section,format=hang]{caption}
 \section{Mathematical Basics of Gesture Recognition}
 \input{contents/chapters/mathematicalBasics.tex}
 
-\input{contents/Registers.tex}
+\FloatBarrier
+\section{Recognition of Gestures}
+\input{contents/chapters/gestureRecognition.tex}
 
+\input{contents/Registers.tex}
+ 
 \end{document}

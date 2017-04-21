@@ -1,0 +1,11 @@
+\select@language {british}
+\select@language {british}
+\contentsline {section}{\numberline {0.1}Mathematical Basics of Gesture Recognition}{1}
+\contentsline {subsection}{\numberline {0.1.1}Terminology of the possible Rotations}{1}
+\contentsline {subsection}{\numberline {0.1.2}Acceleration depending on Pitch}{2}
+\contentsline {subsection}{\numberline {0.1.3}Acceleration depending on Roll}{3}
+\contentsline {subsection}{\numberline {0.1.4}Acceleration depending on Azimuth}{4}
+\contentsline {subsection}{\numberline {0.1.5}Final Equations for the Acceleration Values}{4}
+\contentsline {subsubsection}{Final Equation: X-Acceleration }{5}
+\contentsline {subsubsection}{Final Equation: Y-Acceleration }{6}
+\contentsline {subsubsection}{Final Equation: Z-Acceleration }{6}
