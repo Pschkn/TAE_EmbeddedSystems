@@ -138,6 +138,7 @@ int i=0;
                 }
                 break;
             case 1:
+                Log.i("State 1: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz));
                 if(currentAx > -5 && currentAx < 5
                         && currentAz > -5 && currentAz < 5){
                     nextState();
@@ -151,6 +152,7 @@ int i=0;
                 }
                 break;
             case 3:
+                Log.i("State 3: Ax/Az", String.valueOf(currentAx) + "/" + String.valueOf(currentAz));
                 if(currentAx > -5 && currentAx < 5
                         && currentAz > -5 && currentAz < 5){
                     nextState();
