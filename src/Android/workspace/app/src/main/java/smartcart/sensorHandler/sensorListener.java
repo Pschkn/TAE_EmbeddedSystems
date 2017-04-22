@@ -49,7 +49,6 @@ public class sensorListener implements SensorEventListener {
 
     public sensorListener(MediaPlayer mp){
         this.mp = mp;
-        Log.i("SensorListener", "Created");
     }
     @Override
     public void onSensorChanged(SensorEvent event) {
@@ -61,7 +60,6 @@ public class sensorListener implements SensorEventListener {
 
             if (event.sensor.getType() == Sensor.TYPE_LINEAR_ACCELERATION) {
                 float[] mAccel = event.values;
-                Log.i("MyTimestamp", String.valueOf(event.timestamp));
                 lastAx = mAccel[0];
                 lastAy = mAccel[1];
                 lastAz = mAccel[2];
@@ -291,7 +289,6 @@ public class sensorListener implements SensorEventListener {
     }
 
     private void resetState(float x, float z){
-        Log.i("Resetted", "State: " + String.valueOf(state) + "| X: " + x + " | Z: " + z);
         state = 0;
         xValueReached = false;
         zValueReached = false;
