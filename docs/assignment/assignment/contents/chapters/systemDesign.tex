@@ -54,14 +54,23 @@ visualized on the smartphone's display.
 \label{fig:context}
 \end{figure}
 
-
 \subsection{Finite State Machine}
-hier war noch nicht sicher welche gesten überhaupt verwendet werden und bla bla
-bla (vllt einfach ner murks state machine machen weil die vom dio der letzte
-rotz ist und absolut flasch)
+
+The app SmartCart is developed as a finite state machine. A finite state machine
+is defined by the fact that it can only have finite states. In order to describe
+such a machine, the so-called state diagrams are used. The state diagrams
+resulting from the analysis and evolved during the development cycle are
+presented in the following subsections.
+
 \subsubsection{First State Machine}
-auf jedenfall zuerst diese kackendreck state machin richtig falsch machen aber
-dennoch wenigstens halbwegs sinnvoll
+
+This section describes the first design of the state machine. As can be seen in
+figure \ref{fig:first state machine}, this consists of only two states. The
+reason for only two states is that at this early development cylce neither the
+gestures nor the action triggered by the gestures could be accurately defined.
+Therefore, a data analysis was first carried out to ensure which gestures are
+possible at all and which make sense for the application.
+
 \begin{figure}
 \centering
 \captionsetup{justification=centering}
@@ -70,13 +79,26 @@ dennoch wenigstens halbwegs sinnvoll
 \label{fig:first state machine}
 \end{figure}
 
-\subsubsection{Evolutioned State Machine}
-auch diese self übergänge erklären\ldots also alles darf passieren uznd er
-bleibt in diesem state
+\subsubsection{Evolution of the State Machine}
 
-\textbf{Statemachine nochmals anpsassen weil weniger states inzwischen haben.
-Urhzeigersinn = abhaken, gegen=nächstes item. in start kann die liste angelegt
-werden usw und wenn mer nach rechts swiped ist das start shopping} 
+After the completion of the data analysis, the gestures and actions could be
+defined (see section \ref{sec:bliblbablubb}) \textbf{\color{red}{TODO: Kapitle
+vom Markus referenzieren}}. Subsequently, the state machine could also be
+evolved and adapted. After starting the application, it is in the ``Start''
+state. Afterwards, it is possible to start the purchase. If purchasing is
+started with ``Start Shopping'', the application is in the ``Recognise
+Gesture '' state. In this state, the application waits for a gesture. For this
+purpose, two gestures were defined, each of lead to a certain action. If a
+clockwise gesture of the mobile phone is detected, this leads to the state
+``Check Item''. In this state, the selected item is checked off. Subsequently,
+the state switches back to the ``Recognise Gesture'' state. If a
+counter-clockwise gesture is detected, this results in the ``Switch Item''
+state. In this state, the current item is swapped to the end of the shopping
+list. After the action has been completed, the system returns to the previous
+state. In general, the status `` Recognise Gesture '' will remain as long as no
+valid gesture is detected or the purchase is terminated. In addition, it is
+possible to terminate the app in all states. The complete state machine is shown
+in figure \ref{fig:evo state machine}.
 
 \begin{figure}
 \centering
