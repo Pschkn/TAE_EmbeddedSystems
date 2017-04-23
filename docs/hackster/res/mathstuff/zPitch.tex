@@ -2,9 +2,9 @@
 	\newcommand{\cosAngle}{0.866}
 	\newcommand{\sinAngle}{0.5}
 	\newcommand{\sideLength}{2}
-	\newcommand{\handyLength}{4}
-	\newcommand{\hlh}{\handyLength/2}
-	\newcommand{\handyThickness}{0.25}
+	\newcommand{\mobileLength}{4}
+	\newcommand{\hlh}{\mobileLength/2}
+	\newcommand{\mobileThickness}{0.25}
     	
 	\coordinate (origo) at (0,0);
     	\coordinate (point_on_x) at (2,0);
@@ -17,20 +17,20 @@
 	\draw[thick,red,->] (begin_a_z) -- (end_a_y) node (y_real) [red,above left]
 	{$a_z$}; 
 	\begin{scope}[rotate=30]
-		%\coordinate (end_a_z_handy) at ($(begin_a_z)+(0,-\sideLength)$);
-		\coordinate (end_a_z_handy) at ($(begin_a_z)+(0,-\cosAngle*\sideLength)$);
+		%\coordinate (end_a_z_mobile) at ($(begin_a_z)+(0,-\sideLength)$);
+		\coordinate (end_a_z_mobile) at ($(begin_a_z)+(0,-\cosAngle*\sideLength)$);
 	\end{scope}	
-	\draw[thick,blue,->] (begin_a_z) -- (end_a_z_handy) node (z_handy) [blue,above
-	right] {$a_{z, handy}$};
+	\draw[thick,blue,->] (begin_a_z) -- (end_a_z_mobile) node (z_mobile) [blue,above
+	right] {$a_{z, mobile}$};
 
-	\draw[thick,orange,->] (end_a_z_handy)  -- (end_a_y) node (y_handy)
-	[orange,below right] {$a_{y, handy}$};
+	\draw[thick,orange,->] (end_a_z_mobile)  -- (end_a_y) node (y_mobile)
+	[orange,below right] {$a_{y, mobile}$};
 
    	\begin{scope}[rotate=30]
-		\coordinate (end_a_y_handy) at (-\hlh-\sideLength,0);
+		\coordinate (end_a_y_mobile) at (-\hlh-\sideLength,0);
 		%\coordinate (begin_a_z) at (-\hlh, 0);
 
-    		\fill[gray] ($ (origo) + (-\hlh,-\handyThickness/2) $) rectangle ($ (origo) + (\hlh,\handyThickness/2) $);
+    		\fill[gray] ($ (origo) + (-\hlh,-\mobileThickness/2) $) rectangle ($ (origo) + (\hlh,\mobileThickness/2) $);
 		\draw[dashed, black] (-\hlh,0)--(\hlh,0);
 		\coordinate (rotated) at (\hlh,0);
 	\end{scope}	
@@ -46,6 +46,6 @@
 
 	% angle vectors
 	\tkzMarkAngle[fill=
-	orange,size=1.2cm,opacity=.4](end_a_y,begin_a_z,end_a_z_handy) \pic [draw, ->,
-	"$\alpha$", angle eccentricity=1.5] {angle = end_a_y--begin_a_z--end_a_z_handy};
+	orange,size=1.2cm,opacity=.4](end_a_y,begin_a_z,end_a_z_mobile) \pic [draw, ->,
+	"$\alpha$", angle eccentricity=1.5] {angle = end_a_y--begin_a_z--end_a_z_mobile};
   \end{tikzpicture}

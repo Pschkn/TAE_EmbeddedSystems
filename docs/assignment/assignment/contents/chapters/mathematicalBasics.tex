@@ -63,8 +63,8 @@ sensor.
     \begin{minipage}{0.5\textwidth}
         \centering
 			\begin{align} 
-				a_{z, handy} &= \tan(\alpha) \cdot {a_{y, handy}}\\
-				a_y &= \frac{a_{y, handy}}{\cos(\alpha)}
+				a_{z, mobile} &= \tan(\alpha) \cdot {a_{y, mobile}}\\
+				a_y &= \frac{a_{y, mobile}}{\cos(\alpha)}
 			\end{align}
     \end{minipage}
 \end{figure}
@@ -82,8 +82,8 @@ sensor.
     \begin{minipage}{0.5\textwidth}
         \centering
 			\begin{align} 
-				a_{y, handy} &= \tan(\alpha) \cdot a_{z, handy}\\ 
-				a_z &= \frac{a_{z, handy}}{\cos(\alpha)}
+				a_{y, mobile} &= \tan(\alpha) \cdot a_{z, mobile}\\ 
+				a_z &= \frac{a_{z, mobile}}{\cos(\alpha)}
 			\end{align}
     \end{minipage}
 \end{figure}
@@ -109,8 +109,8 @@ from the figures \ref{fig:xRoll} and \ref{fig:zRoll}.
     \begin{minipage}{0.5\textwidth}
         \centering
 			\begin{align} 
-				a_{z, handy} &= \tan(\beta) \cdot {a_{x, handy}}\\
-				a_x &= \frac{a_{x, handy}}{\cos(\beta)}
+				a_{z, mobile} &= \tan(\beta) \cdot {a_{x, mobile}}\\
+				a_x &= \frac{a_{x, mobile}}{\cos(\beta)}
 			\end{align}
     \end{minipage}
 \end{figure}
@@ -128,8 +128,8 @@ from the figures \ref{fig:xRoll} and \ref{fig:zRoll}.
     \begin{minipage}{0.5\textwidth}
         \centering
 			\begin{align} 
-				a_{x, handy} &= \tan(\beta) \cdot a_{z, handy}\\ 
-				a_z &= \frac{a_{z, handy}}{\cos(\beta)}
+				a_{x, mobile} &= \tan(\beta) \cdot a_{z, mobile}\\ 
+				a_z &= \frac{a_{z, mobile}}{\cos(\beta)}
 			\end{align}
     \end{minipage}
 \end{figure}
@@ -154,8 +154,8 @@ vector-decomposition is depicted in the figures \ref{fig:xAzimuth} and
     \begin{minipage}{0.5\textwidth}
         \centering
 			\begin{align} 
-				a_{y, handy} &= \tan(\gamma) \cdot {a_{x, handy}}\\
-				a_x &= \frac{a_{x, handy}}{\cos(\gamma)}
+				a_{y, mobile} &= \tan(\gamma) \cdot {a_{x, mobile}}\\
+				a_x &= \frac{a_{x, mobile}}{\cos(\gamma)}
 			\end{align}
     \end{minipage}
 \end{figure}
@@ -173,8 +173,8 @@ vector-decomposition is depicted in the figures \ref{fig:xAzimuth} and
     \begin{minipage}{0.5\textwidth}
         \centering
 			\begin{align} 
-				a_{x, handy} &= \tan(\gamma) \cdot a_{y, handy}\\ 
-				a_y &= \frac{a_{y, handy}}{\cos(\gamma)}
+				a_{x, mobile} &= \tan(\gamma) \cdot a_{y, mobile}\\ 
+				a_y &= \frac{a_{y, mobile}}{\cos(\gamma)}
 			\end{align}
     \end{minipage}
 \end{figure}
@@ -189,21 +189,21 @@ the direction of x depends on the values of roll and azimuth. Combining these
 two equations leads to the following equation:
 
 \begin{equation}
-a_x = \frac{a_{x, handy}}{\cos(\beta) \cdot \cos(\gamma)}
+a_x = \frac{a_{x, mobile}}{\cos(\beta) \cdot \cos(\gamma)}
 \end{equation}
 
-\noindent The measured value of $a_{x,handy}$ is affected in two cases:
+\noindent The measured value of $a_{x,mobile}$ is affected in two cases:
 \begin{itemize}
-\item{if the handy is accelerated in the direction of z and the value of roll is
+\item{if the mobile is accelerated in the direction of z and the value of roll is
 not equal to 0}
-\item{if the handy is accelerated in the direction of y and the value of azimuth is not equal to 0}
+\item{if the mobile is accelerated in the direction of y and the value of azimuth is not equal to 0}
 \end{itemize}
 These affectations are defined by the equations $(1.7)$ and $(1.11)$. Taking
 these equations into account leads to the following, final equation:
 
 \begin{equation}
-a_x = \frac{a_{x, handy} \cdot (1 - \tan(\beta) \cdot a_{z, handy}
-- \tan(\gamma) \cdot a_{y, handy})}{\cos(\beta) \cdot \cos(\gamma)}
+a_x = \frac{a_{x, mobile} \cdot (1 - \tan(\beta) \cdot a_{z, mobile}
+- \tan(\gamma) \cdot a_{y, mobile})}{\cos(\beta) \cdot \cos(\gamma)}
 \end{equation}
 
 \subsubsection{Final Equation: Y-Acceleration }
@@ -212,37 +212,37 @@ direction of y on the values of pitch and azimuth. If these equations
 are put together, the result is given by:
 
 \begin{equation}
-a_y = \frac{a_{y, handy}}{\cos(\alpha) \cdot \cos(\gamma)}
+a_y = \frac{a_{y, mobile}}{\cos(\alpha) \cdot \cos(\gamma)}
 \end{equation}
 
-\noindent The measured value of $a_{y,handy}$ is affected in two cases:
+\noindent The measured value of $a_{y,mobile}$ is affected in two cases:
 \begin{itemize}
-\item{if the handy is accelerated in the direction of z and the value of pitch is not equal to 0}
-\item{if the handy is accelerated in the direction of x and the value of azimuth is not equal to 0}
+\item{if the mobile is accelerated in the direction of z and the value of pitch is not equal to 0}
+\item{if the mobile is accelerated in the direction of x and the value of azimuth is not equal to 0}
 \end{itemize}
 Therefore, the equations $(1.3)$ and $(1.9)$ have to be included in the
 calculations.
 This leads to the following, final equation:
 
 \begin{equation}
-a_y = \frac{a_{y, handy} \cdot (1 - \tan(\alpha) \cdot a_{z, handy}
-- \tan(\gamma) \cdot a_{x, handy})}{\cos(\alpha) \cdot \cos(\gamma)}
+a_y = \frac{a_{y, mobile} \cdot (1 - \tan(\alpha) \cdot a_{z, mobile}
+- \tan(\gamma) \cdot a_{x, mobile})}{\cos(\alpha) \cdot \cos(\gamma)}
 \end{equation}
 
 \subsubsection{Final Equation: Z-Acceleration }
 The basic equation for the acceleration in the direction of z is retrieved by assembling the equations $(1.4)$ and $(1.8)$ that define the accelerations dependency on the values of roll and pitch respectively. 
 \begin{equation}
-a_z = \frac{a_{z, handy}}{\cos(\alpha) \cdot \cos(\beta)}
+a_z = \frac{a_{z, mobile}}{\cos(\alpha) \cdot \cos(\beta)}
 \end{equation}
 
-\noindent The measured value of $a_{z,handy}$ is affected in two cases:
+\noindent The measured value of $a_{z,mobile}$ is affected in two cases:
 \begin{itemize}
-\item{if the handy is accelerated in the direction of y and the value of pitch is not equal to 0}
-\item{if the handy is accelerated in the direction of x and the value of roll is not equal to 0}
+\item{if the mobile is accelerated in the direction of y and the value of pitch is not equal to 0}
+\item{if the mobile is accelerated in the direction of x and the value of roll is not equal to 0}
 \end{itemize}
 If these cases (see equations $(1.1)$ and $(1.5)$) are considered, the final
 equation is given by:
 \begin{equation}
-a_z = \frac{a_{z, handy} \cdot (1 - \tan(\alpha) \cdot a_{y, handy}
-- \tan(\beta) \cdot a_{x, handy})}{\cos(\alpha) \cdot \cos(\beta)}
+a_z = \frac{a_{z, mobile} \cdot (1 - \tan(\alpha) \cdot a_{y, mobile}
+- \tan(\beta) \cdot a_{x, mobile})}{\cos(\alpha) \cdot \cos(\beta)}
 \end{equation}

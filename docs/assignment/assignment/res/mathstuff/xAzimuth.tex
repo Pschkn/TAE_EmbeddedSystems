@@ -2,10 +2,10 @@
 	\newcommand{\cosAngle}{0.866}
 	\newcommand{\sinAngle}{0.5}
 	\newcommand{\sideLength}{2}
-	\newcommand{\handyLength}{4}
-	\newcommand{\hlh}{\handyLength/2}
-	\newcommand{\handyWidth}{2}
-	\newcommand{\hwh}{\handyWidth/2}
+	\newcommand{\mobileLength}{4}
+	\newcommand{\hlh}{\mobileLength/2}
+	\newcommand{\mobileWidth}{2}
+	\newcommand{\hwh}{\mobileWidth/2}
 	\newcommand{\padding}{0.25}
 
 	\begin{scope}[rotate=120]
@@ -19,10 +19,10 @@
 	\coordinate (end_a_x) at ($(begin_a_x)+(\sideLength,0)$);
 	\draw[very thick,red,->] (begin_a_x)  -- (end_a_x) node (x_real) [red,below] {$a_x$}; 
 
-	\coordinate (end_a_x_handy) at ($(begin_a_x)+(\cosAngle*\cosAngle*\sideLength,\sinAngle*\cosAngle*\sideLength)$);
-	\draw[thick,green,->] (begin_a_x)  -- (end_a_x_handy) node (x_handy) [green,above] {$a_{x, handy}$};
+	\coordinate (end_a_x_mobile) at ($(begin_a_x)+(\cosAngle*\cosAngle*\sideLength,\sinAngle*\cosAngle*\sideLength)$);
+	\draw[thick,green,->] (begin_a_x)  -- (end_a_x_mobile) node (x_mobile) [green,above] {$a_{x, mobile}$};
 	
-	\draw[thick,orange,->] (end_a_x_handy) -- (end_a_x) node (y_handy) [orange,above right] {$a_{y, handy}$};
+	\draw[thick,orange,->] (end_a_x_mobile) -- (end_a_x) node (y_mobile) [orange,above right] {$a_{y, mobile}$};
 
 	\begin{scope}[rotate=30]
 		\coordinate (rotated) at (0,2);
@@ -46,6 +46,6 @@
 
 	% angle vectors
 	\tkzMarkAngle[fill=
-	blue,size=1.2cm,opacity=.4](end_a_x,begin_a_x,end_a_x_handy) \pic [draw, ->,
-	"$\gamma$", angle eccentricity=1.5] {angle = end_a_x--begin_a_x--end_a_x_handy};
+	blue,size=1.2cm,opacity=.4](end_a_x,begin_a_x,end_a_x_mobile) \pic [draw, ->,
+	"$\gamma$", angle eccentricity=1.5] {angle = end_a_x--begin_a_x--end_a_x_mobile};
   \end{tikzpicture}

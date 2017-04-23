@@ -3,9 +3,9 @@
 	\newcommand{\cosAngle}{0.866}
 	\newcommand{\sinAngle}{0.5}
 	\newcommand{\sideLength}{2}
-	\newcommand{\handyLength}{4}
-	\newcommand{\hlh}{\handyLength/2}
-	\newcommand{\handyThickness}{0.25}
+	\newcommand{\mobileLength}{4}
+	\newcommand{\hlh}{\mobileLength/2}
+	\newcommand{\mobileThickness}{0.25}
     	
 	\coordinate (origo) at (0,0);
     	\coordinate (point_on_x) at (2,0);
@@ -14,20 +14,20 @@
 	
 
    	\begin{scope}[rotate=30]
-		\coordinate (end_a_y_handy) at (-\hlh-\cosAngle*\sideLength,0);
+		\coordinate (end_a_y_mobile) at (-\hlh-\cosAngle*\sideLength,0);
 		\coordinate (begin_a_y) at (-\hlh, 0);
 
-    		\fill[gray] ($ (origo) + (-\hlh,-\handyThickness/2) $) rectangle ($ (origo) + (\hlh,\handyThickness/2) $);
+    		\fill[gray] ($ (origo) + (-\hlh,-\mobileThickness/2) $) rectangle ($ (origo) + (\hlh,\mobileThickness/2) $);
 		\draw[dashed, black] (-\hlh,0)--(\hlh,0);
 		\coordinate (rotated) at (\hlh,0);
-		 \draw[thick,orange,->] (begin_a_y)  -- (end_a_y_handy) node (y_handy)
-		 [orange,below] {$a_{y, handy}$}; \begin{scope}[rotate=-30]
+		 \draw[thick,orange,->] (begin_a_y)  -- (end_a_y_mobile) node (y_mobile)
+		 [orange,below] {$a_{y, mobile}$}; \begin{scope}[rotate=-30]
 			\draw[very thick,red,->] (-\hlh*\cosAngle,-1)  -- (end_a_y) node (y_real)
 			[red,above] {$a_y$}; 
-			\draw[thick,blue,->](end_a_y_handy)
+			\draw[thick,blue,->](end_a_y_mobile)
 						--
-						(-\hlh - \sideLength*\cosAngle,-1) node (z_handy) [blue, left] {$a_{z,
-						handy}$};
+						(-\hlh - \sideLength*\cosAngle,-1) node (z_mobile) [blue, left] {$a_{z,
+						mobile}$};
 		\end{scope}
 	\end{scope}	
     	% draw axes
@@ -43,6 +43,6 @@
 
 	% angle vectors
 	\tkzMarkAngle[fill=
-	orange,size=1.2cm,opacity=.4](end_a_y,begin_a_y,end_a_y_handy) \pic [draw, ->,
-	"$\alpha$", angle eccentricity=1.5] {angle = end_a_y--begin_a_y--end_a_y_handy};
+	orange,size=1.2cm,opacity=.4](end_a_y,begin_a_y,end_a_y_mobile) \pic [draw, ->,
+	"$\alpha$", angle eccentricity=1.5] {angle = end_a_y--begin_a_y--end_a_y_mobile};
   \end{tikzpicture}
