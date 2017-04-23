@@ -31,31 +31,37 @@
 % durchführbar sind, werden verschiedene mathematischen Berechnungen benötigt.
 
 % Das Ende dieses Dokuments beschreibt das Ergebnis der App sowie deren Nutzung.
-This present document describes the product SmartCart of the team IoT-Designers.
-The aim of the application is to offer a smarter way of shopping to the users.
+The present document describes the product SmartCart of the team IoT-Designers.
+The aim of the application is to offer a smarter way of shopping to its users.
 The application offers the possibility of easily marking items as added to the
-cart and the navigation through a list via gestures, in order to support and
-relieve the user during shopping. Therefore, the recognition of gestures is done
+cart and of navigating through a list via gestures, in order to support and
+relieve the user during shopping. The recognition of gestures is done
 via the built-in acceleration sensor in combination with the magnetic field
 sensor.
 
-Instead of handling the shopping list with the help of pen and paper, this app
-should make this easier with gesture control. The main focus is on two use cases
-offered to the user. This allows the user to switch between the items in the
-shopping list with one hand and simple but unambiguous gestures, as well as to
-check off the already found items.
+Instead of handling a shopping list with the help of pen and paper or by
+pushing buttons on a virtual list, this app easies the whole process via
+gesture control.
+The main focus is placed on two use cases offered to the app's user:
+switching between the items in the shopping list as well as to check off the
+already found items with only one hand and simple but unambiguous gestures. 
 
-To recognize the chosen gestures, the acceleration sensor and the magnetic field sensor are
-used. The retrieved acceleration values are used to determine the movement that
-is made. The magnetic field sensor sensor serves to recognize the orientation of the
+%To recognize the chosen gestures, the acceleration sensor and the magnetic
+% field sensor are used. 
+The retrieved acceleration values from the acceleration sensor are used to
+determine the movement that is made. The magnetic field sensor serves to 
+recognize the orientation of the
 smartphone and to be able to subtract out its influence out of the acceleration
 values.
 
-In order to derive gestures from the values obtained from the sensors, data were
-first acquired which reflect the respective gestures. Various measurements were
-carried out in order to assign the different sensor values. In order for the
-gestures to be carried out independently of the orientation of the mobile phone,
-various mathematical calculations are additionally required.
+In order to derive gestures from the values obtained by the sensors, data
+which reflects the respective gestures was acquired in the first step. Various
+measurements were carried out to link the different sensor values to
+their correlating gesture.
+In order for the
+gesture recognition to be carried out independently of the orientation of the
+mobile phone, the values of the magnetic field sensor are set against the
+retrieved acceleration values in the final step.
 
 The end of this document describes the results of the app and how to use it.
 
