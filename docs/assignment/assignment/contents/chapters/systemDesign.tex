@@ -6,8 +6,8 @@ the current section.
 SmartCart in its final scope addresses two main use cases: the use case of
 creating a shopping list and adding items to it as well as the process of going
 shopping itself (see \ref{fig:UseCases}). The use case ``Go shopping''
-implements the main user interaction that consists of switching the next item to
-buy and of marking an item of the shopping list as `added to cart'. This
+implements the main user interaction that consists of switching to the next
+buyable item and marking an item of the shopping list as `added to cart'. This
 interaction takes place via gestures made by the user with its smartphone that
 are detected by the SmartCart application.
 
@@ -42,7 +42,7 @@ account when recognizing the user's gestures.
 \subsection{Application Context}
 The context of the application can be retrieved from figure \ref{fig:context}.
 The inputs are the values of the accelerometer $a_x$, $a_y$ and $a_z$ as well as
-the angles $azimuth$, $pitch$ and $roll$ that determine the smartphones
+the angles $azimuth$, $pitch$ and $roll$ that determine the smartphone's
 orientation. The current state and any other information of the application are
 visualized on the smartphone's display.
 
@@ -64,14 +64,14 @@ presented in the following subsections.
 
 \subsubsection{First State Machine}
 
-This section describes the first design of the state machine. As can be seen in
-figure \ref{fig:first state machine}, this consists of only two states. The
-reason for only two states is that at this early development cylce neither the
-gestures nor the action triggered by the gestures could be accurately defined.
-Therefore, a data analysis was first carried out to ensure which gestures are
-possible at all and which make sense for the application.
+This section describes the first design of the state machine. As seen in
+figure \ref{fig:first state machine}, it consists of only two states. Neither the
+gestures nor the action triggered by the gestures could be accurately defined at
+this early development cylce. Therefore, a data analysis will be first carried
+out to ensure which gestures are possible at all and which make sense for the
+application.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \captionsetup{justification=centering}
 \includegraphics[width=\textwidth]{res/sa/PresentationStateMachineOld.png}
@@ -81,14 +81,13 @@ possible at all and which make sense for the application.
 
 \subsubsection{Evolution of the State Machine}
 
-After the completion of the data analysis, the gestures and actions could be
-defined (see section \ref{sec:bliblbablubb}) \textbf{\color{red}{TODO: Kapitle
-vom Markus referenzieren}}. Subsequently, the state machine could also be
-evolved and adapted. After starting the application, it is in the ``Start''
-state. Afterwards, it is possible to start the purchase. If purchasing is
-started with ``Start Shopping'', the application is in the ``Recognise
+After the completion of the data analysis, the gestures and actions can be
+defined (see section \ref{sec:accmilestones}). Subsequently, the state machine can
+also be evolved and adapted. After starting the application, it is in the
+``Start'' state. Afterwards, it is possible to start the purchase. If purchasing
+is started with ``Start Shopping'', the application is in the ``Recognise
 Gesture '' state. In this state, the application waits for a gesture. For this
-purpose, two gestures were defined, each of lead to a certain action. If a
+purpose, two gestures are defined, each of lead to a certain action. If a
 clockwise gesture of the mobile phone is detected, this leads to the state
 ``Check Item''. In this state, the selected item is checked off. Subsequently,
 the state switches back to the ``Recognise Gesture'' state. If a
@@ -100,7 +99,7 @@ valid gesture is detected or the purchase is terminated. In addition, it is
 possible to terminate the app in all states. The complete state machine is shown
 in figure \ref{fig:evo state machine}.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \captionsetup{justification=centering}
 \includegraphics[width=\textwidth]{res/sa/PresentationStateMachineNew.png}

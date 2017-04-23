@@ -98,11 +98,11 @@ Orientation}
 %TODO: Which gesture is made?
 Conducting several measurements, it becomes clear that the acceleration
 distribution depends on the orientation of the smartphone. A formula is required
-to calculate the smartphone’s acceleration in the direction of x and z
-independent its rotation (see chapter \ref{sect:mathBasics}). The values that
-are measured if these formulas are applied are depicted in figure
+to calculate the smartphone's acceleration in the direction of x and z,
+independent of its rotation (see chapter \ref{sect:mathBasics}). If these
+formulas are applied, the measured values are depicted in figure
 \ref{fig:finalAcc}. Using this measurement, it is possible to define milestone
-points to identify a gesture as a circle. 
+points to identify a gesture as a circle.
  
 \begin{figure}
 \centering
@@ -130,13 +130,14 @@ points to identify a gesture as a circle.
 \label{fig:finalAcc}
 \end{figure}
 
-\subsection{Acceleration milestones}
+\subsection{Acceleration Milestones}
+\label{sec:accmilestones}
 
-The tables \ref{tab:milestonesCcw} and \ref{tab:milestonesCw} show the defined
-acceleration values which have to be reached to recognize a gesture as a circle
-in the clockwise/counterclowckwise direction.
+The tables \ref{tab:milestonesCw} and \ref{tab:milestonesCcw} show the
+defined acceleration values which have to be reached to recognize a gesture as a
+circle in clockwise or counterclowckwise direction.
 
-In each state the calculated acceleration values in the direction of x or z
+In each state, the calculated acceleration values in the direction of x or z
 respectively have to reach the predefined values within a specified time slot
 (0,3s) to get to the next state. Besides that, each state defines a reset value
 which resets the current circle recognition. This is necessary to prevent false
