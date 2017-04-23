@@ -130,7 +130,7 @@ points to identify a gesture as a circle.
 \label{fig:finalAcc}
 \end{figure}
 
-\subsubsection{Acceleration milestones}
+\subsection{Acceleration milestones}
 
 The tables \ref{tab:milestonesCcw} and \ref{tab:milestonesCw} show the defined
 acceleration values which have to be reached to recognize a gesture as a circle
@@ -140,7 +140,8 @@ In each state the calculated acceleration values in the direction of x or z
 respectively have to reach the predefined values within a specified time slot
 (0,3s) to get to the next state. Besides that, each state defines a reset value
 which resets the current circle recognition. This is necessary to prevent false
-positives (e.g. while shaking the smartphone fast).
+positives (e.g. recognizing a circle while shaking the smartphone fast). The
+meaning of the presented states is depicted in figure \ref{fig:circleStates}.
 
 
 \begin{minipage}{0.45\textwidth}
@@ -158,7 +159,7 @@ State & $a_x$ & $a_z$ & Reset Cond. \\
 \label{tab:milestonesCw}
 \end{minipage}\hspace{0.1\textwidth}
 \begin{minipage}{0.45\textwidth}
-\footnotesize 
+\footnotesize
 \begin{tabular}{c|c|c|c}
 State & $a_x$ & $a_z$ & Reset Cond. \\
 \hline
@@ -171,3 +172,11 @@ State & $a_x$ & $a_z$ & Reset Cond. \\
 \captionof{table}{Milestones: Circle counter-clockwise}
 \label{tab:milestonesCcw}
 \end{minipage}
+
+\begin{figure}
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=0.4\textwidth]{res/gestures/circleMilestones.png}
+\caption{States of the Circle-Recognition}
+\label{fig:circleStates}
+\end{figure}
