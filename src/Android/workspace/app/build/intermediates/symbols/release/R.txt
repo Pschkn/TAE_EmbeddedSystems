@@ -259,7 +259,7 @@ int layout manage_list_default 0x7f040002
 int layout starting_page 0x7f040003
 int menu activity_main 0x7f0c0000
 int mipmap ic_launcher 0x7f030000
-int raw beep5 0x7f060000
+int raw circlerecognizedtone 0x7f060000
 int raw gtm_analytics 0x7f060001
 int string ActStateDescr 0x7f07001d
 int string ActStateValue 0x7f07001e

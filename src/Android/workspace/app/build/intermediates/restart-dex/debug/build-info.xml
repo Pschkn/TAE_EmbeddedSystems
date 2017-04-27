@@ -6,13 +6,13 @@
     density="xxhdpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1493289503582"
+    timestamp="1493289996393"
     token="-5911692027873954737"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="306" />
+        duration="268" />
     <task
         name="instant-run-dex"
         duration="0" />
@@ -21,7 +21,7 @@
         duration="24" />
     <task
         name="verifier"
-        duration="9" />
+        duration="4" />
 
     <artifact
         location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
@@ -81,7 +81,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1493289503582"
+        timestamp="1493289996393"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_4.apk"

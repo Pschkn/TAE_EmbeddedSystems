@@ -839,9 +839,8 @@ containing a value of this type.
         public static final int ic_launcher=0x7f030000;
     }
     public static final class raw {
-        public static final int beep5=0x7f060000;
-        public static final int circlerecognizedtone=0x7f060001;
-        public static final int gtm_analytics=0x7f060002;
+        public static final int circlerecognizedtone=0x7f060000;
+        public static final int gtm_analytics=0x7f060001;
     }
     public static final class string {
         public static final int ActStateDescr=0x7f07001d;

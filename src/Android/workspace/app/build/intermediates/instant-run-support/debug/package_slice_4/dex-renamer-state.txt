@@ -1,4 +1,4 @@
-#Thu Apr 27 12:38:28 CEST 2017
+#Thu Apr 27 12:46:39 CEST 2017
 base.0=D\:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_4
 renamed.0=classes.dex
 file.0=D\:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_4\\classes.dex
