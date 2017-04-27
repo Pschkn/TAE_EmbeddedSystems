@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="0dp"
+    android:paddingBottom="0dp"
+    android:paddingRight="0dp">
+
+    <LinearLayout
+        android:id="@+id/currentItemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/fab_material_black"
+        android:elevation="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Next Item:"
+            android:textColor="@color/fab_material_blue_grey_900" />
+
+        <TextView
+            android:id="@+id/currentItemTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/default_gap"
+            android:shadowColor="@color/accent_material_dark"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="300"
+            android:textSize="40dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp">
+
+        <ListView
+            android:id="@+id/toBuyListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/accent_material_dark"
+        android:elevation="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp">
+
+        <ListView
+            android:id="@+id/boughtListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="right"/>
+    </LinearLayout>
+
+</LinearLayout>

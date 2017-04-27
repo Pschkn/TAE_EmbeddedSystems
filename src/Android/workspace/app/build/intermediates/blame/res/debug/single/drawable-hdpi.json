@@ -4,12 +4,12 @@
         "source": "C:\\Users\\admin\\.android\\build-cache\\2413ac09181db1166aae50772a8aeae9d645bf49\\output\\res\\drawable-hdpi\\common_signin_btn_icon_normal_dark.9.png"
     },
     {
-        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\powered_by_google_dark.png",
-        "source": "C:\\Users\\admin\\.android\\build-cache\\2413ac09181db1166aae50772a8aeae9d645bf49\\output\\res\\drawable-hdpi\\powered_by_google_dark.png"
-    },
-    {
         "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\common_signin_btn_icon_disabled_dark.9.png",
         "source": "C:\\Users\\admin\\.android\\build-cache\\2413ac09181db1166aae50772a8aeae9d645bf49\\output\\res\\drawable-hdpi\\common_signin_btn_icon_disabled_dark.9.png"
+    },
+    {
+        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\powered_by_google_dark.png",
+        "source": "C:\\Users\\admin\\.android\\build-cache\\2413ac09181db1166aae50772a8aeae9d645bf49\\output\\res\\drawable-hdpi\\powered_by_google_dark.png"
     },
     {
         "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\common_full_open_on_phone.png",

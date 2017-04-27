@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\release\\layout\\add_product.xml",
+        "source": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\src\\main\\res\\layout\\add_product.xml"
+    },
+    {
+        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\release\\layout\\go_shopping_default.xml",
+        "source": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\src\\main\\res\\layout\\go_shopping_default.xml"
+    },
+    {
+        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\release\\layout\\manage_list_default.xml",
+        "source": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\src\\main\\res\\layout\\manage_list_default.xml"
+    },
+    {
+        "merged": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\merged\\release\\layout\\starting_page.xml",
+        "source": "D:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\src\\main\\res\\layout\\starting_page.xml"
+    }
+]

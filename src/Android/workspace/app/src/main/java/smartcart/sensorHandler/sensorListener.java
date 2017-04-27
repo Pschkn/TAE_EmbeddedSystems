@@ -5,10 +5,13 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.MediaPlayer;
+import android.os.Vibrator;
 import android.util.Log;
 
 import smartcart.activities.goShoppingDefaultFragment;
 import smartcart.model.shoppingList;
+
+import static android.content.Context.VIBRATOR_SERVICE;
 
 /**
  * Created by admin on 02.04.2017.

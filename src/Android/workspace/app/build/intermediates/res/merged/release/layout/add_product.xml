@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/fab_material_yellow_500"
+    android:layout_weight="1"
+    android:elevation="20dp"
+    >
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <TextView
+                style="@style/AppTheme"
+                android:layout_weight="1"
+                android:text="Add Product"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <TextView
+                style="@style/AppTheme"
+                android:layout_weight="1"
+                android:text="Name:" />
+
+            <EditText
+                style="@style/AppTheme"
+                android:id="@+id/et_name"
+                android:layout_weight="2" />
+            </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                style="@style/AppTheme"
+                android:layout_weight="1"
+                android:text="Quantity:" />
+
+            <EditText
+                style="@style/AppTheme"
+                android:id="@+id/et_quantity"
+                android:layout_weight="2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <Button
+                android:text="Confirm"
+                android:layout_weight="1"/>
+            </TableRow>
+
+    </TableLayout>
+</RelativeLayout>

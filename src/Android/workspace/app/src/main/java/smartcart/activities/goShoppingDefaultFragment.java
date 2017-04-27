@@ -6,6 +6,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.MediaPlayer;
+import android.os.Vibrator;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -23,6 +24,8 @@ import java.util.ArrayList;
 
 import smartcart.model.shoppingList;
 import smartcart.sensorHandler.sensorListener;
+
+import static android.content.Context.VIBRATOR_SERVICE;
 
 /**
  * Created by admin on 25.03.2017.
@@ -63,7 +66,7 @@ public class goShoppingDefaultFragment extends Fragment {
             boughtAdapter.notifyDataSetChanged();
         }
         // Media
-        mp = MediaPlayer.create(getActivity().getApplicationContext(), R.raw. beep5);
+        mp = MediaPlayer.create(getActivity().getApplicationContext(), R.raw.circlerecognizedtone);
 
         // Sensors
         if(sel==null)
@@ -147,6 +150,9 @@ public class goShoppingDefaultFragment extends Fragment {
         boughtAdapter.notifyDataSetChanged();
 
         currentItemTV.setText(shoppingList.GetCurrentItem());
+
+        ((Vibrator)getActivity().getSystemService(VIBRATOR_SERVICE)).vibrate(50);
+        mp.start();
     }
 
     public void DisplayToast(String msg){
