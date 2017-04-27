@@ -18,7 +18,6 @@ public class shoppingList {
         myList.add("Onion");
         myList.add("Milk");
         myList.add("Cheddar");
-        myList.add("Cola");
         myList.add("Pizza");
         myList.add("Water");
 

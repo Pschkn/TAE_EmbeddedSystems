@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Apr 27 12:48:13 CEST 2017
+#Thu Apr 27 13:12:12 CEST 2017
 122.file=D\:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\resources-release.ap_\\res\\drawable-xxhdpi-v4\\ic_plusone_standard_off_client.png
 60.set=ANDROID_RESOURCE
 129.file=D\:\\Master\\Embedded GIT\\src\\Android\\workspace\\app\\build\\intermediates\\res\\resources-release.ap_\\res\\drawable-xxhdpi-v4\\common_signin_btn_text_focus_dark.9.png

@@ -95,7 +95,13 @@ public class manageListDefaultFragment extends Fragment {
 
                 imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
 
-                shoppingList.AddListItem(name + " (" + quantity + ")");
+                if (quantity.trim().equals("")) {
+                    shoppingList.AddListItem(name);
+                }
+                else if (Integer.parseInt(quantity) == 1)
+                    shoppingList.AddListItem(name);
+                else
+                    shoppingList.AddListItem(name + " (" + quantity + ")");
                 adapter.notifyDataSetChanged();
             }
         });

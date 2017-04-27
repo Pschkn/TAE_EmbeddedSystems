@@ -6,25 +6,25 @@
     density="xxhdpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1493289996393"
+    timestamp="1493291418284"
     token="-5911692027873954737"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="268" />
+        duration="172" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="24" />
+        duration="5" />
     <task
         name="verifier"
-        duration="4" />
+        duration="13" />
 
     <artifact
-        location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
         type="SPLIT" />
     <artifact
         location="D:\Master\Embedded GIT\src\Android\workspace\app\build\outputs\apk\app-debug.apk"
@@ -81,10 +81,21 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1493289996393"
+        timestamp="1493291333667"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\outputs\apk\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1493291418284"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="D:\Master\Embedded GIT\src\Android\workspace\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
             location="D:\Master\Embedded GIT\src\Android\workspace\app\build\outputs\apk\app-debug.apk"
